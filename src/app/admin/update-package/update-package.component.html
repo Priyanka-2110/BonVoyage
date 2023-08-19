@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+<br>
+<div class="timelineContainer">
+  <ul class="timeline">
+    <li class="active-tl">Package</li>
+    <li>Itinerary</li>
+    <li>Gallery</li>
+  </ul>
+</div>
+<img src="/assets/images/edit.jpg" alt="package" class="packageImg" >
+
+<div class="enquire-box">
+
+  <h1>Update {{packageData?.name| titlecase}} Package</h1><br>
+
+    <form #updatePackage="ngForm" class="common-form" (ngSubmit)="submit(updatePackage.value)">
+
+      <p class="message-p">{{packageMessage}}</p>
+
+      <div class="field">
+        <input type="text" class="form-input" name="name" ngModel="{{packageData?.name}}" required>
+        <label>Package Name</label>
+      </div>
+
+      <div class="field">
+        <input type="text" class="form-input" name="duration" ngModel="{{packageData?.duration}}" required>
+        <label>Package Duration</label>
+      </div>
+
+      <div class="field">
+        <input type="text" class="form-input" name="locations" ngModel="{{packageData?.locations}}" required>
+        <label>Travelling Locations</label>
+      </div>
+
+      <div class="field">
+        <input type="number" class="form-input" name="price" ngModel="{{packageData?.price}}" required="">
+        <label>Price</label>
+      </div>
+
+
+      <div class="field">
+        <input type="text" class="form-input" name="image" ngModel="{{packageData?.image}}" required>
+        <label>Image URL</label>
+      </div>
+
+      <!--<div class="field">
+        <input type="text" class="form-input" name="video" ngModel="{{packageData?.video}}" required>
+        <label>Video URL</label>
+      </div>-->
+
+      <div>
+        <button class="btn btn-5" [disabled]="updatePackage.invalid">
+            <span></span>
+            Update Package
+        </button>
+      </div>
+    </form>
+</div>
+
+
+<br><br><br>
+<app-footer></app-footer>
+
+
+
+
+
+<!--<div class="update-product">
+  <h1>Update {{packageData?.name| titlecase}} Package</h1><br>
+  <p class="message-p">{{packageMessage}}</p>
+  <form #updatePackage="ngForm" class="common-form" (ngSubmit)="submit(updatePackage.value)">
+    <input type="text" class="form-input" placeholder="Package Name" name="name" ngModel="{{packageData?.name}}">
+    <input type="text" class="form-input" placeholder="Package Duration" name="duration" ngModel="{{packageData?.duration}}">
+    <input type="text" class="form-input" placeholder="Travelling Locations" name="locations" ngModel="{{packageData?.locations}}">
+    <input type="text" class="form-input" placeholder="Image URL" name="image" ngModel="{{packageData?.image}}">
+    <button class="form-button">Update Package</button>
+  </form>
+</div>-->

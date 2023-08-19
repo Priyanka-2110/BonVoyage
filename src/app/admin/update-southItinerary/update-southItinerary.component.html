@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+<div class="timelineContainer">
+  <ul class="timeline">
+    <li class="active-tl">Package</li>
+    <li>Itinerary</li>
+    <li>Gallery</li>
+  </ul>
+</div>
+<br><br><br><br><br><br>
+<div class="update-product">
+  <h1>Update {{packageData?.name | titlecase}} Itinerary</h1><br>
+  <p class="message-p">{{packageMessage}}</p>
+  <div style="float:left;">
+    <button class="btn1 btn1-5" id="add" (click)="addItem()" >New Itinerary Field</button>
+    <form #updatePackage="ngForm" class="common-form" (ngSubmit)="updatePackageData()">
+
+      <table class="table table-bordered">
+
+        <tr *ngFor="let itineraryItem of packageData?.itinerary; let i=index;">
+          <td>
+            Title
+            <div class="field">
+              <input type="text" class="form-input" placeholder="Title" name="title{{i}}" [(ngModel)]="itineraryItem.title">
+            </div>
+          </td>
+          <td>
+            Details
+            <div class="field">
+              <textarea class="form-input" placeholder="Details" name="details{{i}}" [(ngModel)]="itineraryItem.details" rows="5" cols="50"></textarea>
+            </div>
+        </td>
+          <!--<td><input type="text" class="form-input" placeholder="Title" name="title{{i}}" [(ngModel)]="itineraryItem.title"></td>
+          <td><textarea class="form-input" placeholder="Details" name="details{{i}}" [(ngModel)]="itineraryItem.details" rows="5" cols="50"></textarea></td>-->
+          <td>
+            <button class="btn1 btn1-5 remove-button" (click)="removeExistingField(i)">Remove</button>
+          </td>
+        </tr>
+
+        <tr *ngFor="let newItem of newItems; let i=index;">
+          <td>
+            Title
+            <div class="field">
+              <input type="text" class="form-input" placeholder="New Title" name="newTitle{{i}}" [(ngModel)]="newItems[i].title">
+            </div>
+        </td>
+          <td>
+            Details
+            <div class="field">
+              <textarea class="form-input" placeholder="New Details" name="newDetails{{i}}" [(ngModel)]="newItems[i].details" rows="5" cols="50"></textarea>
+            </div>
+        </td>
+          <!--<td><input type="text" class="form-input" placeholder="New Title" name="newTitle{{i}}" [(ngModel)]="newItems[i].title"></td>
+          <td><textarea class="form-input" placeholder="New Details" name="newDetails{{i}}" [(ngModel)]="newItems[i].details" rows="5" cols="50"></textarea></td>-->
+          <td>
+            <button class="btn1 btn1-5 remove-button" (click)="removeItem(i)">Remove</button>
+          </td>
+        </tr>
+
+      </table>
+      <div>
+        <button type="submit" class="btn btn-5">
+          <span></span>
+          Update Itinerary
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+<!--<div class="update-product">
+  <h1>Update {{packageData?.name | titlecase}} Package</h1>
+  <br>
+  <p class="message-p">{{packageMessage}}</p>
+  <div style="float:left;">
+    <form #updatePackage="ngForm" class="common-form" (ngSubmit)="submit(updatePackage.value)">
+      <div style="display: flex; align-items: flex-start;">
+
+        <div style="flex: 1;">
+          <div *ngFor="let itineraryItem of packageData?.itinerary; let i=index;">
+            <input type="text" class="form-input" placeholder="Title" name="title{{i}}" [(ngModel)]="itineraryItem.title">
+            <textarea class="form-input" placeholder="Details" name="details{{i}}" [(ngModel)]="itineraryItem.details"></textarea>
+          </div>
+        </div>
+
+
+        <div style="flex: 1;">
+          <div *ngFor="let newItem of newItems; let i=index;">
+            <input type="text" class="form-input" placeholder="New Title" name="newTitle{{i}}" [(ngModel)]="newItems[i].title">
+            <textarea class="form-input" placeholder="New Details" name="newDetails{{i}}" [(ngModel)]="newItems[i].details"></textarea>
+          </div>
+        </div>
+
+        <div style="flex: 1;">
+          <div *ngFor="let newItem of newItems; let i=index;">
+            <button class="add-button" (click)="removeItem(i)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <button class="add-button" (click)="addItem()">Add New</button>
+  </div>
+
+  <div style="width:50%; margin:auto;">
+    <div style="display:inline-block; width:45%;text-align:center;">
+      <button class="form-button" (click)="updatePackageData()">Update Package</button>
+    </div>
+  </div>
+</div>-->

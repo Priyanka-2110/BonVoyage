@@ -1,0 +1,193 @@
+<app-navbar></app-navbar>
+<br>
+<div class="timelineContainer">
+  <ul class="timeline">
+    <li class="active-tl">Package</li>
+    <li>Itinerary</li>
+    <li>Gallery</li>
+  </ul>
+</div>
+<img src="/assets/images/package.png" alt="package" class="packageImg" >
+
+<div class="enquire-box">
+  <h2>Add South Indian Package</h2>
+
+  <form #addPackage="ngForm" class="common-form" (ngSubmit)="submit(addPackage.value)">
+
+    <p class="message-p">{{addPackageMessage}}</p>
+
+    <div class="field">
+      <input type="text" class="form-input" name="name" #nameField="ngModel" ngModel required="" min="3" max="20" pattern="^[a-zA-Z\s-]+$">
+      <label>Name</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="nameField.invalid && (nameField.dirty || nameField.touched)" class="error-message">
+        <span *ngIf="nameField.errors?.['required']">Package name is required</span>
+        <span *ngIf="nameField.errors?.['pattern']">Please enter a valid package name <br> Ex: Andaman</span>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="field">
+      <input type="text" class="form-input" name="duration" #durationField="ngModel" ngModel required="" pattern="^\d+\s+Nights\s+\d+\s+Days$">
+      <label>Duration</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="durationField.invalid && (durationField.dirty || durationField.touched)" class="error-message">
+        <span *ngIf="durationField.errors?.['required']">Duration is required</span>
+        <span *ngIf="durationField.errors?.['pattern']">Please enter a valid duration <br> Ex: 3 Nights 4 Days</span>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="field">
+      <input type="text" class="form-input" name="locations" #locationField="ngModel" ngModel required="" min="3" max="20" pattern="^[a-zA-Z\s-]+(?:,[a-zA-Z\s-]+)*$">
+      <label>Travel Destinations</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="locationField.invalid && (locationField.dirty || locationField.touched)" class="error-message">
+        <span *ngIf="locationField.errors?.['required']">Destination is required</span>
+        <span *ngIf="locationField.errors?.['pattern']">Please enter a valid destination <br> Ex: Port Blair, Ross, North Bay, Viper Island, Havelock</span>
+      </div>
+    </div>
+
+    <br>
+
+
+    <div class="field">
+      <input type="number" class="form-input" name="price" #priceField="ngModel" ngModel required="">
+      <label>Price</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="priceField.invalid && (priceField.dirty || priceField.touched)" class="error-message">
+        <span *ngIf="priceField.errors?.['required']">Duration is required</span>
+      </div>
+    </div>
+
+    <br>
+
+
+    <div class="field">
+      <input type="text" class="form-input" #imageField="ngModel" name="image" ngModel required="">
+      <label>Image</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="imageField.invalid && (imageField.dirty || imageField.touched)" class="error-message">
+        <span *ngIf="imageField.errors?.['required']">Image is required</span>
+      </div>
+    </div>
+
+    <br>
+
+    <!--<div class="field">
+      <input type="text" class="form-input" #videoField="ngModel" name="video" ngModel required="">
+      <label>Video</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="videoField.invalid && (videoField.dirty || videoField.touched)" class="error-message">
+        <span *ngIf="videoField.errors?.['required']">Video is required</span>
+      </div>
+    </div>-->
+
+    <!--<label>Image</label><br>
+      <input type="file" (change)="onSelectFile($event)" class="form-input" #imageField="ngModel" name="image" ngModel required="" style="border: none;">
+      <img [src]="selectedImage" *ngIf="selectedImage" alt="Selected Image">
+
+    <div class="invalid-input">
+      <div *ngIf="imageField.invalid && (imageField.dirty || imageField.touched)" class="error-message">
+        <span *ngIf="imageField.errors?.['required']">Image is required</span>
+      </div>
+    </div>
+
+    <br>
+
+    <label>Video</label><br>
+      <input type="file" accept="video/*" (change)="onSelectVideo($event)" class="form-input" #videoField="ngModel" name="video" ngModel required=""  style="border: none;">
+      <video *ngIf="selectedVideo" controls>
+      <source [src]="selectedVideo" type="video/mp4">
+      </video>
+
+    <div class="invalid-input">
+      <div *ngIf="videoField.invalid  && (videoField.dirty || videoField.touched)" class="error-message">
+        <span *ngIf="videoField.errors?.['required']">Video is required</span>
+      </div>
+    </div>-->
+
+    <br>
+
+    <br>
+
+    <div>
+      <button class="btn btn-5" [disabled]="addPackage.invalid">
+          <span></span>
+          Add Package
+      </button>
+    </div>
+  </form>
+
+
+</div>
+
+
+<br><br><br>
+<app-footer></app-footer>
+
+
+<!--<app-navbar></app-navbar>
+<br>
+
+<img src="/assets/images/package.png" alt="package" class="packageImg" >
+
+<div class="enquire-box">
+  <h2>Add South Indian Package</h2>
+
+  <form #addPackage="ngForm" class="common-form" (ngSubmit)="submit(addPackage.value)">
+
+    <p class="message-p">{{addPackageMessage}}</p>
+
+    <div class="field">
+      <input type="text" class="form-input" name="name" ngModel required="">
+      <label>Name</label>
+    </div>
+
+    <div class="field">
+      <input type="text" class="form-input" name="duration" ngModel required="">
+      <label>Duration</label>
+    </div>
+
+    <div class="field">
+      <input type="text" class="form-input" name="location" ngModel required="">
+      <label>Travel Destinations</label>
+    </div>
+
+    <div class="field">
+      <input type="text" class="form-input" name="image" ngModel required="">
+      <label>Image</label>
+    </div>
+
+    <div class="field">
+      <input type="text" class="form-input" name="video" ngModel required="">
+      <label>Video</label>
+    </div>
+
+    <div>
+      <button class="btn btn-5">
+          <span></span>
+          Add Package
+      </button>
+    </div>
+
+  </form>
+
+</div>
+
+<br><br><br>
+<app-footer></app-footer>-->

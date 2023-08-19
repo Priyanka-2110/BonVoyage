@@ -1,0 +1,81 @@
+.container{
+  position: relative;
+}
+
+/*.cover{
+	position: relative;
+	width: auto;
+	margin: 0;
+	left: 0;
+  top: 20px;
+}*/
+.cover{
+	width: 1526px;
+	margin: 0;
+  top: 25px;
+	height: 672px;
+	float: left;
+	filter: brightness(50%); /*Darken the image*/
+  position: relative;
+  right: 210px;
+}
+.CoverName p{
+	font-size: 80px;
+	color: white;
+	position: relative;
+	bottom: 150px;
+	left: 75px;
+  height: 100px;
+}
+.totalTours{
+  position: relative;
+  top: 100px;
+  right: 120px;
+  font-family: "Playfair Display",sans-serif;
+}
+.display-image{
+  height: 200px;
+  width: 100%;
+}
+.spacing{
+  margin-top: 100px;
+}
+.card-spacing{
+  padding-bottom: 40px;
+}
+.list-title:hover{
+  color: red;
+  cursor: pointer;
+}
+.medium-4 {
+  width: 350px;
+}
+.col-md-4{
+  height: 400px;
+  padding: 25px 40px 0 40px ;
+}
+.card{
+  position: relative;
+  right: 15px;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+}
+.card-body{
+  font-family: poppins,sans-serif;
+}
+.card-body i {
+  color: #536d77;
+}
+.card-body h5{
+  font-family: "Playfair Display",sans-serif;
+}
+.icon{
+  position: relative;
+  bottom: 220px;
+  left: 280px;
+  color: white;
+  cursor: pointer;
+}
+.icon:hover{
+  color: red;
+}

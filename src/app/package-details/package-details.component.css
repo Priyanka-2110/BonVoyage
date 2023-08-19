@@ -1,0 +1,204 @@
+.product-details{
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.product-details .product-img{
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+.product-color{
+  border: 3px solid #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.quantity-group{
+  margin-top: 20px;
+}
+.quantity-group button{
+  padding: 10px;
+}
+.quantity-group input{
+  padding: 10px;
+  width: 50px;
+}
+.icon{
+  color: grey;
+  cursor: pointer;
+  position: relative;
+  left: 1050px;
+  bottom: 70px;
+}
+.icon:hover{
+  color: red;
+}
+
+/*i.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}*/
+
+
+/* Style for the entire mat-accordion element */
+mat-accordion {
+ /* border: 1px solid #ccc;*/
+  border-radius: 4px;
+  margin: 20px 0;
+  position: relative;
+  left: 92px;
+}
+
+/* Style for the expansion panel header */
+mat-expansion-panel-header {
+  /*background-color: #eee;*/
+  background-color: white;
+  font-weight: bold;
+  padding: 16px;
+  width: 1000px;/**/
+  font-family: "Playfair Display",sans-serif;
+}
+
+/* Style for the content of the expansion panel */
+mat-expansion-panel {
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 1000px;/**/
+  border-left: 5px solid #db6150;
+}
+
+/* Style for the first expansion panel */
+mat-expansion-panel:first-of-type {
+  border-top: 1px solid #ccc;
+}
+
+/* Style for the last expansion panel */
+mat-expansion-panel:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+
+.PackageName {
+	padding-top: 25px;
+	position: relative;
+	left: 95px;
+	font-size: 13px;
+	color: black;
+	text-align: justify;
+  font-family: "Playfair Display",sans-serif;
+}
+.details{
+  font-family: "poppins",sans-serif;
+  color: #808080;
+  font-size: 13px;
+  position: relative;
+  left: 95px;
+  font-weight: 1000;
+}
+.PackageVideo{
+	position: relative;
+	top: 20px;
+	left: 92px;
+  border: 2px solid #db6150;
+  border-radius: 50px;
+}
+hr{
+  position: relative;
+  left: 90px;
+  width: 1000px;
+  bottom: 20px;
+}
+
+.btn-5 {
+  position: relative;
+  color: #6D6875;
+  padding: 18px 55px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 30px;
+  background: #fff;
+  overflow: hidden;
+  width: 234px;
+  left: 500px;
+  top: 30px;
+}
+
+.btn-5::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -15%;
+  transform: rotate(15.6deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #D8E2DC;
+  z-index: 9;
+}
+
+.btn-5::after {
+  content: "";
+  position: absolute;
+  top: -152%;
+  right: -4%;
+  transform: rotate(14.57deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #FEC89A;
+}
+
+.btn-5 span {
+  position: absolute;
+  top: -70%;
+  left: -15%;
+  transform: rotate(1.42deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #FCD5CE;
+}
+/*****************************************************************************************/
+
+.img-container {
+  width: 1000px;
+  height: 685px;
+  border: 2px solid #db6150;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+.img-prev {
+  margin-top: 10px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.img-slide {
+  display: inline-block;
+  width: 208px;
+  height: 131px;
+  margin: 0 1px;
+  cursor: pointer;
+  opacity: 0.6;
+  flex: 0 0 auto;
+  margin-right: 10px;
+
+}
+.img-prev::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.img-slide.active {
+  border: 2px solid #db6150;
+  opacity: 1;
+}
+.img-slide img {
+  /*width: 100%;
+  height: auto;*/
+  width: 208px;
+  height: 131px;
+}
+
+
+
+

@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="cart-page">
+  <h1>Favorites</h1>
+  <div class="row">
+  <div class="col-sm-8 details">
+      <ul *ngFor="let fav of favData">
+          <li>
+              <img src="{{fav.image}}" alt="">
+          </li>
+          <li>
+              <span> {{fav.name}}</span>
+          </li>
+          <!--<li>
+              <span>{{fav.locations}}</span>
+          </li>-->
+          <li>
+              <span>{{fav.duration}}</span>
+          </li>
+          <li >
+             <button class="form-button">Un Favorite</button>
+          </li>
+          <li>
+            <button (click)="booknow()" class="form-button max-width" >Book Now</button>
+          </li>
+      </ul>
+
+  </div>
+  </div>
+  </div>

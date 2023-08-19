@@ -1,0 +1,1008 @@
+{
+  "admin": [
+    {
+      "name": "Admin",
+      "email": "bonvoyageproject1@gmail.com",
+      "password": "BonVoyage@2110",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "name": "Priyanka",
+      "email": "gspriyankasarala@gmail.com",
+      "password": "Welcome@123",
+      "id": 1
+    },
+    {
+      "name": "Sarala",
+      "email": "ssarala.sl@gmail.com",
+      "password": "Sarala@2110",
+      "id": 2
+    },
+    {
+      "name": "Brindhaa",
+      "email": "brindhaakarthikeyan@gmail.com",
+      "password": "Brindhaa@1710",
+      "id": 3
+    }
+  ],
+  "packages": [
+    {
+      "name": "DELHI",
+      "duration": "2 Nights 3 Days",
+      "locations": "Delhi, Vrindavan, Mathura, Gokul, Mahavan, Govardhan, Nandgaon, Barsana",
+      "image": "/assets/images/Delhi1.jpg",
+      "video": "/assets/videos/Delhi.mp4",
+      "id": 1,
+      "price": 19774,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Delhi – Vrindavan - Mathura",
+          "details": "After your arrival at Delhi, you will be taken to Vrindavan, which is Lord Krishna’s childhood place. In Vrindavan, you can check out the Iskon Temple and then visit the Bankey Bihari Temple, Main temple of Lord Krishna. It is one of the oldest temples built in the year of 1921. Later, proceed to Rangaji Temple and the Vrindavan’s highest temple. Move to Mathura and get into the hotel. Enjoy a delicious meal and take rest at your leisure. In the evening, proceed to Mathura which is the birth place of Lord Krishna. Ensure to visit the Dwaraka Dhish Temple and gaze at the Yamuna ji “Maha Aarti”. Spend your overnight stay at Mathura."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Mathura - Gokul - Mahavan - Govardhan – Mathura",
+          "details": "Take your breakfast in the morning. Our tour representatives will drive you to Gokul and visit the Gokul Nath Ji Temple. Continue to visit Mahavan and ‘Assi Khambha’ the temple that is devoted to lord Krishna. You need to check out Govardhan, where Lord Krishna held aloft ‘Giriraj’, the stonework hill on his finger for seven days. Return back to Mathura for night stay at the hotel."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Mathura - Nandgaon - Barsana – Delhi",
+          "details": "On this day, you will be visiting the Pan Sarovar. This lake is one of the distinguished lakes in Braj. Move on to Barsana - the birth place of Radha. Proceed to the water tank ‘Prem Sarovar’, the first meeting spot of Radha and Krishna. Later, get back to Delhi and move to your home."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/Rangaji Temple.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/Vrindavan.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/Dwarkadhish Temple.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/Pan Sarovar.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/Iskon Temple.jpg"
+        }
+      ]
+    },
+    {
+      "name": "HIMACHAL",
+      "duration": "6 Nights 7 Days",
+      "locations": "Delhi, Shimla, Manali, Chanigarh",
+      "image": "/assets/images/Himachal1.jpg",
+      "video": "/assets/videos/Himachal.mp4",
+      "id": 2,
+      "price": 30963,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Delhi – Shimla (345kms/8hrs)",
+          "details": "After your arrival at New Delhi airport /railway station, our tour representatives transfer you by highway to Shimla. It is the capital of Himachal Pradesh and also the capital of Britishers situated at an elevation of (2500 mts). You can check out the snow topped Shivalik mountain ranges and experience a delightful journey. Get into the hotel and enjoy your overnight stay."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Shimla",
+          "details": "After breakfast, get ready for a sightseeing tour around Shimla. You will be visiting the Naldhera Golf Course and Kufri – Snow point. In the evening, feel free to visit the famous place of Shimla town, The Mall Road & The crest. Spend your overnight stay at Shimla."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Shimla – Manali (280kms/8hrs)",
+          "details": "Take your breakfast in the morning and drive to Manali – 280 kms. Manali is a flawless slope station secured with Snow Mountains & delightful waterfalls. Get back to the hotel and relax at your leisure. You can enjoy a great overnight stay at the hotel."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Manali",
+          "details": "After your morning breakfast, our tour representatives will take you for a short tour to Manali. The tour package include Hadimba Devi Temple, Vashisht Kund – Hot water spring, Tibetan Monasteries and nearby market. Enjoy the rest of the day at your leisure. Return back to the hotel for overnight stay."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Manali – Snow point Excursion",
+          "details": "After your early morning breakfast, get ready for a full day outing tour to Kothi Gorge, Gulaba, Marhi & Rohtang Pass (elevation 3978 mts) and Solang Valley. Move back to the hotel for overnight stay and pleasure in Manali. (Subject to season)."
+        },
+        {
+          "id": 6,
+          "title": "Day 6 : Manali – Chandigarh (320kms/8hrs)",
+          "details": "Take your breakfast in the morning. Drive to the beautiful city of Chandigarh. After your arrival in the evening, get into the hotel and relax for sometime. Later, you will be taken for a city voyage through Chandigarh, Rose enclosure, Rock arrangement, Sukhna Lake and so on. Come back to the hotel for relaxation and overnight stay."
+        },
+        {
+          "id": 7,
+          "title": "Day 7 : Chandigarh - Delhi (250kms/5hrs)",
+          "details": "After your breakfast, check out the hotel and drive to Delhi (250 Kms). Upon arrival at Delhi, transfer to the railway station or airport for onward journey to home."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/paragliding.webp"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/Shivalik mountain ranges.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/Kufri.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/RockArrangement.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/sukhnaLake.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/Rajastan1.jpg",
+      "video": "/assets/videos/Himachal.mp4",
+      "locations": "Delhi, Agra, Jaipur, Jodhpur, Udaipur",
+      "name": "RAJASTHAN",
+      "duration": "7 Nights 8 Days",
+      "price": 17900,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrive Delhi",
+          "details": "Upon your arrival at Delhi, our tour representatives will welcome and guide you for the entire trip. You will be taken for a half day tour to Delhi. Visit Qutub Minar constructed by Qutub-ud-Din Aibek in 1199. Proceed to Jama Masjid, Red Fort & India Gate (War Memorial Arch). Continue your journey towards the President's House, Parliament House, Government Secretariat Buildings and Connaught Place shopping plaza. Spend your overnight stay at Delhi."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Delhi – Agra (220 kms , 05 Hrs)",
+          "details": "After breakfast, continue to Agra. Reach the destination and get into the hotel to relax sometime. In the evening, try to explore the well known market sectors of Agra. Get back to the hotel for overnight stay."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Agra-Jaipur (265 kms, 05hrs)",
+          "details": "In the morning, visit the world popular Taj Mahal fabricated by the Mughul Emperor Shahjehan in 1630 for his Queen Mumtaz Mahal to hallow her mortal remains. Later, visit the Agra Fort containing the Pearl Mosque and the Halls of Public & Private Audience. Additionally, visit the Tomb of Itmad-ud-Daullah manufactured by Empress Noorjehan in memory of her father. In the evening, drive to Jaipur enroute Fatehpur Sikri. You need to know that Fatehpur Sikri is 40 kms from Agra and fabricated by Emperor Akbar in 1569 and deserted following 15 years because of lack of water. See the elegant structures including the Jama Masjid, Tomb of Salim Chisti, Panch Mahal and different Palaces. Arrive Jaipur and register with inn for overnight stay."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Jaipur",
+          "details": "On this day, visit Amber Fort. The Amber Fort was the ancient capital of the State. View the Sheesh Mahal or the Hall of Victory shining with mirrors. In the evening, proceed with Jaipur sightseeing, visit Maharaja's City Palace & the Observatory. View the past Hawa Mahal & throughout the pink rose private & business zones. Spend your overnight stay at Jaipur."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Jaipur – Jodhpur (330 kms / 06 hrs)",
+          "details": "After breakfast, move ahead to Jodhpur, on the way visit Pushkar. Visit the main sanctuary of Lord Brahma encompassed by Pushkar Lake. You will find the devotees taking plunge into the heavenly waters of Pushkar & offering petitions to God at the banks of the lake. Ensure to check out the Fair Site, which is right inverse the Pushkar Lake. Alternatively, you can visit Ajmer Khwaja Dargah in Ajmer (11 kms). After, lunch proceed with your driver to Jodhpur. Arrive Jodhpur at night and enjoy the day at your leisure. You will be spending the overnight sleep at Jodhpur. (By means of Pushkar/Ajmer)"
+        },
+        {
+          "id": 6,
+          "title": "Day 6 : Jodhpur - Udaipur (276 Kms - 5 hours)",
+          "details": "After breakfast, take a drive through Jodhpur and visit the Mehrangarh Fort, Jaswant Thada (Mausoleums of the incredible Rajput Warrior) and Umaid Bhawan Palace Museum. After lunch, proceed to Udaipur. On the way, visit the highly praised Ranakpur Temples of twelfth Century, Proceed to Udaipur and reach the hotel. Get into the hotel and relax for sometime. Spend your overnight sleep in Udaipur."
+        },
+        {
+          "id": 7,
+          "title": "Day 7 : Udaipur",
+          "details": "After your morning breakfast, take a sightseeing voyage tour through Udaipur. You will be visiting the City Palace implicit 1559, a little royal residence over the Lake Pichola. The other main fascinating tourist attractions of the city include Crystal Gallery, Durbar Hall, Jagdish Temple and Palace Museum. Later, visit Saheli Ki Bari and explore the small ornamental garden build in honor of Royal Ladies. Ensure to visit the Lok Kala Mandal and view the people dresses, trimmings, manikins, veils, dolls society musical instruments, people’s gods and painted creations. Opened seven days a week, manikin shows and society moving are led each night from 18:00 to 19:00 in a neighbouring outdoors theatre & Shilpgram to see the town expressions & creates. Spend your overnight stay at Udaipur."
+        },
+        {
+          "id": 8,
+          "title": "Day 8 : Udaipur Departure",
+          "details": "After your breakfast, relax at the grand hotel or go out for shopping at the nearby streets. Later, move to the railway station or airport for flight to get back home."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/TajMahal.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/QutubMinar.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/Pushkar.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/PearlMosque.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/CityPalace.jpg"
+        },
+        {
+          "id": 6,
+          "img": "/assets/images/Tomb.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "/assets/images/Varanasi1.jpg",
+      "video": "/assets/videos/Varanasi.mp4",
+      "locations": "Varanasi, Bodhgaya, Gaya, Allahabad",
+      "name": "VARANASI",
+      "duration": "3 Nights 4 Days",
+      "price": 10097,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Varanasi - Bodhgaya",
+          "details": "On morning, arrive at Varanasi by train or flight. Our tour representatives will take you to Bodhgaya and sign in to the hotel for night stay."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Bodhgaya – Gaya - Varanasi",
+          "details": "On the second day, visit Vishnu Path and the Bodhi tree where Lord Buddha received enlightenment. Later, travel back to Varanasi. Move to the hotel for night stay."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Varanasi – Allahabad – Varanasi",
+          "details": "Following breakfast, get ready to move to Allahabad. Take a holy bath in Triveni Sangam, visit Ananda Bhawan & Hanuman Temple. Later back to Varanasi, on the way visit Vindhyachal (Shakthi Peeth) & Sitamadi. Enjoy the rest of the day at the Varanasi hotel."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Varanasi",
+          "details": "Get up early in the morning to admire the beauty sunrise and an exciting boat ride. Then, visit Lord Durga Temple, Vishwanath Temple, Tulsi Manas Mandir, Banaras Hindu University and Sarnath Museum. Evening move to Airport / Railway Station for your return journey."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/VishwanathTemple.png"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/DurgaTemple.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/TulsiManasMandir.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/Bodhgaya.webp"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/TriveniSangam.jpg"
+        },
+        {
+          "id": 6,
+          "img": "/assets/images/SarnathMuseum.webp"
+        }
+      ]
+    },
+    {
+      "name": "London",
+      "duration": "7 Nights 8 Days",
+      "locations": "Paris",
+      "price": "123",
+      "image": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg",
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1",
+          "details": "aaaaaaaa"
+        },
+        {
+          "id": 1,
+          "title": "Day 2",
+          "details": "bbbbbbbbb"
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        }
+      ],
+      "id": 6
+    }
+  ],
+  "southIndia": [
+    {
+      "name": "KERALA",
+      "duration": "7 Nights 8 Days",
+      "locations": "Kerala, Cochin, India",
+      "image": "/assets/images/Kerala1.jpg",
+      "video": "/assets/videos/Kerala.mp4",
+      "id": 1,
+      "price": 36139,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Trivandrum",
+          "details": "On arrival in Trivandrum, meet our tour representatives and get transferred to the hotel. After breakfast, proceed to some of the important places like Kaudiar Palace, Napier Museum, Padmanabhapuram Palace. Spend your overnight stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Kovalam",
+          "details": "After breakfast, continue to Kovalam , Varkala Shoreline, Sankhumugham Shoreline and others. Later, get back to the resort for an overnight stay."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Allepey",
+          "details": "After breakfast, get into the luxury houseboat to delight in the backwater journey at Alleppey. This trip is thought to be one of the best attractions. All food will be given in the houseboat. Return back to the houseboat for overnight stay."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Thekkady",
+          "details": "Take your breakfast in the morning. Drive to Thekkady (Periyar)-India's most interesting common natural life heaven. After your arrival at Thekkady, check in at hotel and later move out for the nearby place. Visit The Periyar Untamed life Haven, Periyar Lake. Spend your overnight stay at Thekkady Inn."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Munnar",
+          "details": "After breakfast, move ahead to Munnar. Visit Anaimudi peak - the most elevated peak, Devikulam, Mettupatti Dam. You can enjoy your overnight Stay at Inn. Visit the Nyayamakad, Reverberation Point, Rajamala, Kundala, Force House Waterfalls, Malankara Reservoir and more. In the night, return back to the inn for an overnight stay."
+        },
+        {
+          "id": 6,
+          "title": "Day 6 : Munnar",
+          "details": "After morning breakfast, proceed to Echo Point, Rajamala, Nyayamakad, Kundala, Power House Waterfalls, Malankara Reservoir. Flower arrangements will be done in the room. You can spend your overnight stay at Munnar Hotel."
+        },
+        {
+          "id": 7,
+          "title": "Day 7 : Cochin",
+          "details": "Take your breakfast and move out of Cochin. Visit the Dutch Palace, Jewish Synagogue, Chinese fishing nets St:Francis Church, and Cherai Beach. Get back to hotel for night stay."
+        },
+        {
+          "id": 8,
+          "title": "Day 8 : Cochin",
+          "details": "On the last day of your trip after breakfast, proceed to Cochin airport or railway station."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/Allepey.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/VarkalaShoreline.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/Thekkady.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/Munnar.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/Cochin.png"
+        },
+        {
+          "id": 6,
+          "img": "/assets/images/PadmanabhapuramPalace.jpg"
+        },
+        {
+          "id": 7,
+          "img": "/assets/images/NapierMuseum.jpeg"
+        },
+        {
+          "id": 8,
+          "img": "/assets/images/KaudiarPalace.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/Tirupati1.avif",
+      "video": "/assets/videos/Tirupati.mp4",
+      "locations": "Chennai, Tirupati",
+      "name": "TIRUPATI",
+      "duration": "3 Nights 4 Days",
+      "price": 26804,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Chennai",
+          "details": "Without a moment's delay, you arrive at Chennai. Our tour representatives will welcome and transfer you to the hotel. By noon, get ready for a tour to Chennai. Visit the Santhome Cathedral, Parthsarthy Temple, Kapaleeshwar Temple, Marina Beach and National Art Gallery. Enjoy your overnight stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Chennai - Tirupati (170 KMS - 04 Hours drive)",
+          "details": "Take your breakfast in the morning. Get ready for a tour Tirupati. You will be taken to the popular places of Tripati such as Tirupati Temple, Chandragiri Town, Kailasakona Waterfalls, Kalyani Dam and Agastyaswami Temple. Spend your overnight stay at the hotel in Tirupati."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Tirupati - Chennai (170 KMS - 04 Hours drive)",
+          "details": "After your breakfast, move out from the hotel. Our tour representatives will transfer you to Chennai Airport/Railway Station for your return."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/KailasakonaWaterfalls.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/NationalArtGallery.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/MarinaBeach.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/KapaleeshwarTemple.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/ParthsarthyTemple.jpg"
+        },
+        {
+          "id": 6,
+          "img": "/assets/images/SanthomeCathedral.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/Coorg1.jpg",
+      "video": "/assets/videos/Coorg.mp4",
+      "locations": "Bangalore, Coorg",
+      "name": "COORG",
+      "duration": "3 Nights 4 Days",
+      "price": 48789,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Bangalore",
+          "details": "After your arrival in Bangalore, our tour representatives will welcome and transfer you to the hotel. Get into the hotel and relax for sometime. In the evening, get ready for a tour through the Bangalore City which incorporates The Lal Bagh, Cubbon Park, Bangalore Royal residence, Vidhana Soudha, Bull Sanctuary, St. Patrick's Congregation, Tipu Sultan's Castle and different highlights of the city. Spend your overnight stay at the hotel in Bangalore."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Bangalore - Coorg (250 KMS - 06 Hours drive)",
+          "details": "After breakfast, move out from the hotel and drive to Coorg. Get into the hotel and enjoy the rest of day at your leisure. You can enjoy a smooth night stay at the hotel."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Coorg",
+          "details": "After morning breakfast, move ahead for touring voyage through Coorg. On the way, visit Nagarhole National Park, Madikeri Fortress, Iruppu Falls, Raja's Seat, Nunnery Falls and Omkareshwara Sanctuary. Return back to the hotel for overnight stay in Coorg."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Coorg - Bangalore (250 KMS - 06 Hours drive)",
+          "details": "On the last day of your trip, check out from the hotel. Proceed to Bangalore. You will be dropped at Bangalore Airport/Railway Station for your return."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/LalBagh.png"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/CubbonPark.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/VidhanaSoudha.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/TipuSultan'sCastle.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/Nagarhole.jpg"
+        },
+        {
+          "id": 6,
+          "img": "/assets/images/MadikeriFortress.jpg"
+        }
+      ]
+    },
+    {
+      "name": "London",
+      "duration": "7 Nights 8 Days",
+      "locations": "Paris",
+      "price": 121,
+      "image": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg",
+      "itinerary": [
+        {
+          "title": "Day 1",
+          "details": "xxx"
+        },
+        {
+          "id": 2,
+          "title": "Day 2",
+          "details": "yyy"
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "eastIndia": [
+    {
+      "id": 1,
+      "image": "/assets/images/Kalimpong1.jpg",
+      "video": "/assets/videos/Kalimpong.mp4",
+      "locations": "Gangtok, Kalimpong, Darjeeling",
+      "name": "KALIMPONG",
+      "duration": "6 Nights 7 Days",
+      "price": 39748,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrival Njp Railway / (Ixb) Bagdogra Airport - Gangtok",
+          "details": "Upon your arrival at NJP Railway Station or (IXB) Bagdogra Airport, our tour representatives will welcome and help to transfer to the vehicle to Gangtok (5500 Feet /1677 Mts, 130 Kilometers / 04 to 05 Hrs). Sign into the hotel and enjoy your over night stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Gangtok",
+          "details": "Take your breakfast in the morning. Get ready for a pleasure trip to Baba Mandir & Tshangu Lake - located at a height of 12400Ft / 3780 Mts / 43Kms in 3Hrs. The cool water of the Lake is absolutely adjusted with the picturesque beauty around. Return back to Gangtok and spend your overnight stay at the hotel. (In case of Land slide or any problem, the Tshangu Lake will be closed. We will provide some other places of interest to visit.)"
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Gangtok - Kalimpong",
+          "details": "Proceed for a half day touring covering Jhakri Water Falls (04 hrs) along with Research Institute of Tibetology, Flower Show, Directorate of Handicraft & Handloom (Closed on Sunday), Droul Chorthen. In the evening, switch over to Kalimpong (3937 Ft/ 1200 Mts, 85 Kms/ 03 to 04 Hrs), Sign in & over night stay at hotel."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Kalimpong - Darjeeling",
+          "details": "After morning breakfast visit Dello slopes, Flower Nurseries, Dr. Graham's Home, Jang-Dong-Palriffo Brang and Durbin Dara Hills. Drive to Darjeeling (7380 Ft/ 2250 Mts, 70 Kms/ 03 to 04 Hrs), night at the hotel."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Darjeeling",
+          "details": "Early morning, visit the Tiger Hills (8364 Ft/ 2550 Mts at around 4 AM) to view the dawn over Kanchendzonga Peak (subject to clear climate). Ensure to visit Ghoom Monastery, Batasia Loop. After breakfast, get ready for a half-day touring to Peace pagoda, Padmaja Naidu Himalayan Zoological Park , Japanese Temple, & Himalayan Mountaineering Institute (Closed on Thursday), Darjeeling Ropeway Ride (Ticket cost excluded & will be approx INR 180.00 for every individual) Tenzing and Gombu Rock, Tibetan Refugee Self-Help Center (Closed on Sunday) & surrounding perspective of Tea Estate. Enjoy your overnight stay at the hotel."
+        },
+        {
+          "id": 6,
+          "title": "Day 6 : Darjeeling",
+          "details": "After morning breakfast, travel to Mirik (5800 Ft/ 1768 Mts/ 50 Kms/ 02 Hrs one way). A full day trip of Pashupati Nagar (Indo-Nepal outskirt) for shopping & Mirik Lake (Horse riding & Boat is accessible around the lake on immediate payment principle). Get back to Darjeeling and enjoy your overnight stay at the hotel."
+        },
+        {
+          "id": 7,
+          "title": "Day 7 : Darjeeling - Njp Railway Station / (Ixb) Bagdogra Airport",
+          "details": "After morning breakfast, continue to NJP Railway Station / (IXB) Bagdogra Airport (100 Kms / 03 to 04 Hrs), for your onward journey."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/BabaMandir&TshanguLake.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/hakriWaterFalls.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/KanchendzongaPeak.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/ZoologicalPark.jpg"
+        },
+        {
+          "id": 5,
+          "img": "/assets/images/MirikLake.jpg"
+        }
+      ]
+    },
+    {
+      "name": "DARJEELING",
+      "duration": "3 Nights 4 Days",
+      "locations": "Gangtok, Darjeeling",
+      "image": "/assets/images/Darjeeling1.jpg",
+      "video": "/assets/videos/Darjeeling.mp4",
+      "id": 2,
+      "price": 39700,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrival Njp Railway Station / (Ixb) Bagdogra Airport - Gangtok",
+          "details": "Upon your arrival at NJP Railway Station or (IXB) Bagdogra Airport, our tour representatives will welcome and help to transfer to the vehicle to Gangtok (5500 Feet /1677 Mts, 130 Kilometers / 04 to 05 Hrs). Sign into the hotel and enjoy your over night stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Gangtok",
+          "details": "Take your breakfast in the morning. Get ready for a pleasure trip to Baba Mandir & Tshangu Lake - located at a height of 12400Ft / 3780 Mts / 43Kms in 3Hrs. The cool water of the Lake is absolutely adjusted with the picturesque beauty around. Return back to Gangtok and spend your overnight stay at the hotel. (In case of Land slide or any problem, the Tshangu Lake will be closed. We will provide some other places of interest to visit.)"
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Gangtok - Darjeeling",
+          "details": "After morning breakfast, transport to Darjeeling (7380 Ft / 2250 Mts, 115 Kms / 05 to 06 Hrs). By noon, get ready for a half-day sightseeing tour to Peace pagoda, Japanese Temple, Himalayan Mountaineering Institute (Closed on Thursday) & Padmaja Naidu Himalayan Zoological Park, Tenzing & Gombu Rock, Tibetan Refugee Self-Help Center (Closed on Sunday) and Tea Estate. Spend your overnight stay at the hotel."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Darjeeling - Njp Railway / Ixb Airport",
+          "details": "Early morning, take a trip to Tiger Hills (8364 Ft / 2550 Mts at around 4 AM) to view dawn over Kanchendzonga Peak (subject to clear climate). Ensure to stopover at Ghoom Monastery and Asia Loop. Have your morning breakfast and proceed to NJP Railway Station / (IXB) Bagdogra Airport (100 Kms / 03 to 04 Hrs Hrs) for your onward journey."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/BabaMandir&TshanguLake.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/JapaneseTemple.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/TshanguLake.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/ZoologicalPark.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/Gangtok1.jpg",
+      "video": "/assets/videos/Gangtok-Pelling.mp4",
+      "locations": "Gangtok, Pelling",
+      "name": "GANGTOK-PELLING",
+      "duration": "4 Nights 5 Days",
+      "price": 30870,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrival Njp Railway / Ixb Airport - Gangtok",
+          "details": "Upon your arrival at NJP Railway Station or (IXB) Bagdogra Airport, our tour representatives will welcome and help to transfer to the vehicle to Gangtok (5500 Feet /1677 Mts, 130 Kilometers / 04 to 05 Hrs). Sign into the hotel and enjoy your over night stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Gangtok",
+          "details": "Take your breakfast in the morning. Get ready for a pleasure trip to Baba Mandir & Tshangu Lake - located at a height of 12400Ft / 3780 Mts / 43Kms in 3Hrs. The cool water of the Lake is absolutely adjusted with the picturesque beauty around. Return back to Gangtok and spend your overnight stay at the hotel. (In case of Land slide or any problem, the Tshangu Lake will be closed. We will provide some other places of interest to visit.)"
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Gangtok- Pelling",
+          "details": "After a quick breakfast, drive for a half day tour to Jhakri Water Falls (04 hrs) alongside Droul Chorthen, Research Institute of Tibetology, Directorate of Handicraft & Handloom (Closed on Sunday), Flower Show. In the evening, move to Pelling(6100 Ft/ 1860 Mts, 116 Kms/ 05 to 06 Hrs). Get into the hotel and spend your overnight stay."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Pelling",
+          "details": "After morning breakfast, drive to Yuksom (5840 Ft/ 1780 Mts, 35 Kms/ 02 Hrs) and visit the attractions of Rimbi Water fall Darap Village, & Hydro Project, Khecheopalri Lake (6000 Ft/ 1829 Mts). It is one of the hallowed Buddhist mountain lakes and it is accepted that whatever is longed before the lake works out as expected. Myth is that when a leaf falls on the peaceful clear water plane, it is picked by a bird and Kanchanjunga Water fall. A further drive takes you to Yuksom (the gathering spot of three friars) - the first capital of Sikkim. This was the spot where the first Chogyal (a decision tradition in Sikkim) was delegated. Enjoy your night time and move back to Pelling for overnight stay."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Pelling - Njp Railway / Ixb Airport",
+          "details": "After breakfast, travel to NJP Railway Station / IXB Airport (150 Kms / 05 to 06 Hrs), for your onward journey."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/BabaMandir&TshanguLake.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/JhakriFalls.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/rimbiFalls.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/JhakriFalls.jpg"
+        }
+      ]
+    },
+    {
+      "name": "London",
+      "duration": "7 Nights 8 Days",
+      "locations": "Paris",
+      "price": "-1",
+      "image": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg",
+      "itinerary": [
+        {
+          "title": "Day 1",
+          "details": "xxx"
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "westIndia": [
+    {
+      "id": 1,
+      "image": "/assets/images/Dwaraka1.jpg",
+      "video": "/assets/videos/Dwaraka.mp4",
+      "locations": "Ahmedabad, Dwarka, Porbandar, Sasangir, Gondal",
+      "name": "DWARAKA",
+      "duration": "5 Nights 6 Days",
+      "price": 21405,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrival Ahmedabad",
+          "details": "After your arrival, our tour representatives will greet and drive you to Rajkot. Visit Lothal (260 Kilometers/ 5 Hrs) and explore great fun. Lothal is the most broadly exhumed site of Harappan site in India and also you would be able to gain more knowledge about the story of the Indus Valley civilization. Proceed to the tourist attractions of Rajkot. If time licenses, visit - Swamy Narayan Sanctuary: It has been assembled of hand cut stones and the sanctuary is eminent world over for its social work and helpful administrations. Other tourist attractions include Panch Nath Mahadeo Ishwarya Temple, Ramakrishna Ashram, sanctuary, Rotary Mid Town Dolls Museum Asharamji Bapu Ashram. Spend your overnight stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Dwarka",
+          "details": "After a quick breakfast, take a flight to Dwarka (230 Kms/ 5 Hrs) and visit some of the local attractions such as Shri. Nageshwar Temple. Gopi Talab, Bet Dwaraka, Rukmini Temple. In the night, visit Dwarkadhish Temple and get the blessings from the God. Move back to the hotel for overnight stay."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Porbandar",
+          "details": "After breakfast, take a flight to Porbandar (105 Kms / 2 Hrs) and visit the birth spot of Mahatma Gandhi (Kirti Mandir), Sudama Temple. Later, drive to Somnath (135 Kms / 3 Hrs.). Get back to Hotel for refresh and then join in the Temple Darshan. Enjoy a great time in Saurashta Beach. Return to the hotel for overnight stay."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Sasangir",
+          "details": "Take your morning breakfast and catch a flight to Sasangir (50 Kms/ 1hr.) and visit Sasangir safari park. Later, move ahead for nearby touring Fort, Girnar Hills at Junagadh (55 Kms/ 1 hr). Get into the hotel and enjoy your overnight stay."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Gondal",
+          "details": "After morning breakfast, take a flight to Gondal (65 Kms. / 1.5 Hrs.) Proceed to the Naulakha castle and the acclaimed Temple of Swaminarayan. Move on to Ahmedabad (250 Kms/ 6 Hrs) and explore great fun. Spend your overnight stay at the hotel."
+        },
+        {
+          "id": 6,
+          "title": "Day 6 : Departure",
+          "details": "After morning breakfast, get ready for Ahmedabad nearby tour which includes Akshardham Temple at Gandhinagar (30 Kms.). In the night, move to Airport/Railway station to return to your sweet home."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/Porbandar.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/Sasangir.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/Gondal.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/Mumbai1.jpg",
+      "video": "/assets/videos/Mumbai.mp4",
+      "locations": "Mumbai, Aurangaba, Ajanta Caves, Aurnagabad",
+      "name": "MUMBAI",
+      "duration": "4 Nights 5 Days",
+      "price": 32515,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrive Mumbai",
+          "details": "After your arrival at Mumbai Airport/ Railway station, our tour representatives will welcome and transfer you to a vehicle. Proceed to Shirdi (320kms) and explore great fun. On the way, visit Triambakeswar (Jyotirlinga), Nasik& Panchavati Sanctuary and spend your night stay at the hotel."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Aurangaba",
+          "details": "On this morning, proceed to Aurangabad (140kilometers). On the way, visit Sani singanapur. This holy place has a five and a half feet high dark rock introduced on an outside stage that means Lord Shani. This town is highly praised for the way that no house in the town. It has entryways and no robbery has been accounted for in the town. Spend your overnight stay peacefully."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Ajanta Caves",
+          "details": "In the morning, get ready to visit Ajanta Caves, The Ajanta Caves are one of the world's most noteworthy recorded landmarks perceived by UNESCO. These are 30 rock-cut hollow landmarks spotted in the Aurangabad region of Maharashtra going again to the second Century BC to 600 BC. These caves have additional normal painted creations and figures which are thought to be encapsulation of Buddhist religious symbolization & once again to lodging at Aurangabad (220kms). Return to hotel for night stay."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Aurnagabad City Tour",
+          "details": "On the fourth day, visit Ellora, Aurangabad city and Grishneswar (Jyotirlinga) and get back to lodging (140 kilometers). Later, visit Ellora Aurangabad city tour& Grishneswar (Jyotirlinga) and move back to hotel (140 kilometers).Enjoy your overnight stay at the hotel."
+        },
+        {
+          "id": 5,
+          "title": "Day 5 : Departure",
+          "details": "On the last day, check out from the hotel and proceed to Mumbai (410 Kms) for your return."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/Ellora.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/AjantaCaves.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/Triambakeswar.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/Shirdi.jpg"
+        }
+      ]
+    },
+    {
+      "name": "PUNE",
+      "duration": "3 Nights 4 Days",
+      "locations": "Pune, Mahabaleshwar",
+      "image": "/assets/images/Pune1.jpg",
+      "video": "/assets/videos/Pune.mp4",
+      "id": 3,
+      "price": 36405,
+      "itinerary": [
+        {
+          "id": 1,
+          "title": "Day 1 : Arrive Pune",
+          "details": "On arrival in Pune Airport, you will be greeted by our tour representatives and transferred to Lonavala. Get into the hotel and relax for sometime. You can just visit the nearby tourist attractions and enjoy your overnight stay at Lonavala."
+        },
+        {
+          "id": 2,
+          "title": "Day 2 : Mahabaleshwar",
+          "details": "After morning breakfast, you will be taken for a local visit and move ahead Mahabaleshwar. Transfer to the hotel and relax for sometime. Take a break and get ready for nearby touring to Venna Lake and waterfall. Spend your overnight stay at Mahabaleshwar hotel."
+        },
+        {
+          "id": 3,
+          "title": "Day 3 : Mahabaleshwar",
+          "details": "Take your morning breakfast in the hotel. Visit the Panchgani. Shri Shankar Mandir, Panchaganga Mandir, Shri Krishnabai Mandir. Move back to the hotel for overnight stay."
+        },
+        {
+          "id": 4,
+          "title": "Day 4 : Departure",
+          "details": "Have your breakfast and check-out from the hotel. Depart to Pune and our tour representatives will drop you at the Railway station/ Airport."
+        }
+      ],
+      "gallery": [
+        {
+          "id": 1,
+          "img": "/assets/images/MAHABALESHWAR.jpg"
+        },
+        {
+          "id": 2,
+          "img": "/assets/images/panchagani.jpg"
+        },
+        {
+          "id": 3,
+          "img": "/assets/images/VennaLake.jpg"
+        },
+        {
+          "id": 4,
+          "img": "/assets/images/ShriShankarMandir.jpg"
+        }
+      ]
+    },
+    {
+      "name": "London",
+      "duration": "7 Nights 8 Days",
+      "locations": "Paris",
+      "price": "1",
+      "image": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg",
+      "itinerary": [
+        {
+          "title": "Day 1",
+          "details": "xxx"
+        }
+      ],
+      "gallery": [
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        },
+        {
+          "img": "https://img.freepik.com/free-photo/dramatic-white-clouds-blue-sky-from-airplane-window-view-colorful-sunset-cloudscape-background_90220-1208.jpg"
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "favorites": [],
+  "orders": [
+    {
+      "address": "Salem",
+      "contact": "7904037062",
+      "date": "2023-07-15",
+      "strength": 1,
+      "destination": "TIRUPATI",
+      "packageType": "Premium",
+      "status": "Cancelled",
+      "userId": 1,
+      "packagePrice": 36574.6,
+      "userName": "Priyanka",
+      "email": "gspriyankasarala@gmail.com",
+      "orderDate": "14-07-2023",
+      "id": 1
+    },
+    {
+      "address": "Chennai",
+      "contact": "7904037062",
+      "date": "2023-07-15",
+      "strength": 3,
+      "destination": "RAJASTHAN",
+      "packageType": "Premium",
+      "userId": 1,
+      "packagePrice": 37835,
+      "userName": "Priyanka",
+      "email": "gspriyankasarala@gmail.com",
+      "orderDate": "14-07-2023",
+      "status": "Active",
+      "id": 2
+    },
+    {
+      "address": "Chennai",
+      "contact": "7904037062",
+      "date": "2023-07-30",
+      "strength": 3,
+      "destination": "COORG",
+      "packageType": "Premium",
+      "userId": 1,
+      "packagePrice": 73357.35,
+      "userName": "Priyanka",
+      "email": "gspriyankasarala@gmail.com",
+      "orderDate": "15-07-2023",
+      "status": "Active",
+      "id": 3
+    },
+    {
+      "address": "Salem",
+      "contact": "9677305030",
+      "date": "2023-08-03",
+      "strength": 4,
+      "destination": "TIRUPATI",
+      "packageType": "Deluxe",
+      "userId": 1,
+      "packagePrice": 44624.6,
+      "userName": "Priyanka",
+      "email": "gspriyankasarala@gmail.com",
+      "orderDate": "01-08-2023",
+      "status": "Active",
+      "id": 4
+    },
+    {
+      "address": "Salem",
+      "contact": "9677305030",
+      "date": "2023-08-25",
+      "strength": 3,
+      "destination": "GANGTOK-PELLING",
+      "packageType": "Standard",
+      "userId": 1,
+      "packagePrice": 40675.5,
+      "userName": "Priyanka",
+      "email": "gspriyankasarala@gmail.com",
+      "orderDate": "08-08-2023",
+      "id": 5
+    }
+  ]
+}

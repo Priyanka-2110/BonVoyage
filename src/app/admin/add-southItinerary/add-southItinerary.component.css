@@ -1,0 +1,244 @@
+h1{
+  text-align: center;
+  font-family: "Playfair Display",sans-serif;
+  color: #db6150 !important;
+}
+.add-product{
+  text-align: center;
+}
+
+table{
+  text-align: center;
+  color: #db6150;
+  border-collapse: collapse;
+  margin: auto;
+}
+tbody{
+  color: black;
+}
+table td , table th{
+  /*border: 1px solid #db6150;*/
+  border: none;
+  padding: 10px;
+  min-width: 160pxs;
+}
+button{
+  border-radius: 50px;
+  background-color: #db6150;
+  border: none;
+  color: white;
+}
+
+/*****************************************************************************************************************************/
+
+.packageImg{
+  /*height: 800px;
+  width: 1100px;
+  border: 1px solid black;*/
+  height: 600px;
+  width: 600px;
+  display: "inline-block";
+  position: relative;
+  left: 200px;
+  top: 50px;
+}
+.enquire-box {
+  margin: 0 auto;
+  width: 400px;
+  padding: 40px;
+  background: white;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  position: relative;
+  left: 300px;
+  bottom: 550px;
+  display: "inline-block";
+}
+
+.enquire-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+
+.enquire-box .field {
+  position: relative;
+}
+
+.enquire-box .field input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.enquire-box .field label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.enquire-box .field input:focus ~ label,
+.enquire-box .field input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #db6150;
+  font-size: 12px;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+.btn-5 {
+  position: relative;
+  color: #6D6875;
+  padding: 18px 55px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 30px;
+  background: white;
+  overflow: hidden;
+  width: 234px;
+  left: 460px;
+  /*top: 30px;*/
+}
+
+.btn-5::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -15%;
+  transform: rotate(15.6deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #D8E2DC;
+  z-index: 9;
+}
+
+.btn-5::after {
+  content: "";
+  position: absolute;
+  top: -152%;
+  right: -4%;
+  transform: rotate(14.57deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #FEC89A;
+}
+
+.btn-5 span {
+  position: absolute;
+  top: -70%;
+  left: -15%;
+  transform: rotate(1.42deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #FCD5CE;
+}
+.btn1 {
+  flex: 1 1 auto;
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  cursor: pointer;
+ }
+.btn1:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.btn1-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+/**************************************************************************************************/
+
+.timelineContainer{
+  width: 1200px;
+  margin: auto;
+}
+
+.timeline{
+  counter-reset: test 0;
+  position: relative;
+}
+
+.timeline li{
+  list-style: none;
+  float: left;
+  width: 33.3333%;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul:nth-child(1){
+  color: #db6150;
+}
+
+.timeline li:before {
+  counter-increment: test;
+  content: counter(test);
+  width: 50px;
+  height: 50px;
+  border: 3px solid #db6150;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto 10px auto;
+  background: #fff;
+  color: #000;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+}
+.timeline li:nth-child(2):before { /* Added selector for counter element 2 */
+  background: #db6150; /* Updated background color for counter element 2 */
+  color: #fff;
+}
+.timeline li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  top: 25px;
+  left: -50%;
+  z-index: -999;
+  transition: all ease-in-out .3s;
+}
+.timeline li:first-child:after {
+  content: none;
+}
+
+.timeline li.active-tl {
+  color: #db6150;
+}
+
+.timeline li.active-tl:before {
+  background: #db6150;
+  color: #f1f1f1;
+}
+
+.timeline li.active-tl + li:after {
+  background: #db6150;
+}

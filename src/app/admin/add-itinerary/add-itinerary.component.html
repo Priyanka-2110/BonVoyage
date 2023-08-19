@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+
+
+<div class="timelineContainer">
+  <ul class="timeline">
+    <li class="active-tl">Package</li>
+    <li>Itinerary</li>
+    <li>Gallery</li>
+  </ul>
+</div>
+
+<br><br><br><br><br><br>
+<div class="container">
+
+  <!--<h1>Add New Itinerary</h1>-->
+
+  <form [formGroup]="itineraryForm" (ngSubmit)="submit(itineraryForm.value)">
+
+    <p class="message-p">{{addItineraryMessage}}</p>
+
+    <table class="table table-bordered" formArrayName="itinerary">
+
+      <tr>
+        <th colspan="2">Add New Itinerary</th>
+        <th width="150px"><button class="btn1 btn1-5" type="button" (click)="addItinerary()">New Itinerary Field</button></th>
+      </tr>
+
+      <tr *ngFor="let quantity of itinerary().controls; let i=index" [formGroupName]="i">
+        <td>
+            Title
+            <div class="field">
+              <input type="text" name="title" formControlName="title" class="form-control" required>
+            </div>
+        </td>
+
+        <td>
+            Details
+            <div class="field">
+              <textarea type="text" name="details" formControlName="details" class="form-control"></textarea>
+            </div>
+        </td>
+        <td>
+            <button class="btn1 btn1-5" button (click)="removeItinerary(i)">Remove</button>
+        </td>
+      </tr>
+
+    </table>
+
+    <br><br>
+
+    <div>
+      <button type="submit" class="btn btn-5">
+          <span></span>
+          Add Itinerary
+      </button>
+    </div>
+
+  </form>
+
+  <br/>
+  <!--{{this.itineraryForm.value | json}}-->
+</div>
+
+<br><br><br>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

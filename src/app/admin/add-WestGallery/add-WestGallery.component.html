@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="timelineContainer">
+  <ul class="timeline">
+    <li class="active-tl">Package</li>
+    <li>Itinerary</li>
+    <li>Gallery</li>
+  </ul>
+</div>
+<div class="container">
+
+  <form [formGroup]="GalleryForm" (ngSubmit)="submit(GalleryForm.value)">
+
+    <p class="message-p">{{addGalleryMessage}}</p>
+
+    <table class="table table-bordered" formArrayName="gallery">
+
+      <tr>
+        <th colspan="2">Add New Gallery</th>
+        <th width="150px"><button class="btn1 btn1-5" type="button" (click)="addGallery()">New Image Field</button></th>
+      </tr>
+
+      <tr *ngFor="let quantity of gallery().controls; let i=index" [formGroupName]="i">
+        <td>
+            Image
+            <div class="field">
+              <input type="text" name="img" formControlName="img" class="form-control" required>
+            </div>
+        </td>
+
+        <td>
+            <button class="btn1 btn1-5" button (click)="removeGallery(i)">Remove</button>
+        </td>
+      </tr>
+
+    </table>
+
+    <br><br>
+
+    <div>
+      <button type="submit" class="btn btn-5">
+          <span></span>
+          Add Gallery
+      </button>
+    </div>
+
+  </form>
+
+  <br/>
+
+</div>
+
+<br><br><br>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

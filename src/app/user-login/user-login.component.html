@@ -1,0 +1,159 @@
+<app-navbar></app-navbar>
+
+<img src="/assets/images/auth.png" alt="auth" class="authImg" >
+
+<div class="user-auth">
+
+  <div *ngIf="!showSignIn" class="enquire-box">
+    <h2>Register</h2>
+
+    <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
+
+      <div class="field">
+        <input type="text" name="name" #name="ngModel" ngModel required="" pattern="^(?!.*[0-9])(?!.*(?:([A-Za-z])\1{2}))[A-Za-z.'\- ]+$" minlength="3" maxlength="20">
+        <label>Name</label>
+      </div>
+
+      <div class="invalid-input">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+          <span *ngIf="name.errors?.['required']">Name is required</span>
+          <span *ngIf="name.errors?.['pattern']">Please enter a valid name</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="name.invalid && name.touched">Please Enter Your Name</span></p>-->
+
+
+      <div class="field">
+        <input type="email" name="email" email #email="ngModel" ngModel required="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        <label>Email</label>
+      </div>
+
+
+      <div class="invalid-input">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          <span *ngIf="email.errors?.['required']">Email is required</span>
+          <span *ngIf="email.errors?.['pattern']">Please enter a valid Email</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>-->
+
+
+      <div class="field">
+        <input type="password" name="password" minlength="8" #password="ngModel" ngModel required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <label>Password</label>
+      </div>
+
+      <div class="invalid-input">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+          <span *ngIf="password.errors?.['required']">Password is required</span>
+          <span *ngIf="password.errors?.['pattern']">Please must contain atleast 1 uppercase, 1 lowercase, 1 number and 1 special character</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>-->
+
+
+      <br>
+      <div>
+        <button class="btn btn-5" [disabled]="userSignUp.invalid">
+            <span></span>
+            Register
+        </button>
+      </div>
+      <br><br>
+
+      <a class="auth-toggle-link" (click)="openSignIn()">Already have an account? SignIn</a>
+
+    </form>
+  </div>
+
+  <div *ngIf="showSignIn" class="enquire-box">
+    <h2>Log In</h2>
+
+    <form #userSignIn="ngForm" class="common-form" (ngSubmit)="signIn(userSignIn.value)">
+
+      <p class="error-p">{{authError}}</p>
+
+      <div class="field">
+        <input type="email" name="email" email #email="ngModel" ngModel required="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        <label>Email</label>
+      </div>
+
+
+      <div class="invalid-input">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          <span *ngIf="email.errors?.['required']">Email is required</span>
+          <span *ngIf="email.errors?.['pattern']">Please enter a valid Email</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>-->
+
+
+      <div class="field">
+        <input type="password" name="password" minlength="8" #password="ngModel" ngModel required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <label>Password</label>
+      </div>
+
+      <div class="invalid-input">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+          <span *ngIf="password.errors?.['required']">Password is required</span>
+          <span *ngIf="password.errors?.['pattern']">Please must contain atleast 1 uppercase, 1 lowercase, 1 number and 1 special character</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>-->
+
+      <br>
+      <div>
+        <button class="btn btn-5" [disabled]="userSignIn.invalid">
+            <span></span>
+            Log In
+        </button>
+      </div>
+      <br><br>
+
+      <a class="auth-toggle-link" (click)="openSignUp()">Don't have an account? SignUp</a>
+    </form>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
+
+
+<!--<div class="user-auth">
+
+  <div *ngIf="!showSignIn" class="sign-up">
+    <h1>Sign Up</h1>
+    <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
+      <input  class="form-input" type="text" name="name" placeholder="Name" ngModel>
+      <input  class="form-input" type="email" name="email" placeholder="Email" ngModel>
+      <input  class="form-input" type="password" name="password" placeholder="Password" ngModel>
+      <button class="form-button">Sign Up</button>
+      <a class="auth-toggle-link" (click)="openSignIn()">Already have an account? SignIn</a>
+    </form>
+  </div>
+
+  <div *ngIf="showSignIn" class="sign-in">
+    <h1>Sign In</h1>
+    <form #userSignIn="ngForm" class="common-form" (ngSubmit)="signIn(userSignIn.value)">
+      <p class="error-p">{{authError}}</p>
+      <input  class="form-input" type="email" name="email" placeholder="Email" email #email="ngModel" required ngModel>
+      <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>
+      <input  class="form-input" type="password" name="password" placeholder="Password" minlength="8" #password="ngModel" required ngModel>
+      <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>
+      <button class="form-button" [disabled]="userSignIn.invalid">Sign In</button>
+      <a class="auth-toggle-link" (click)="openSignUp()">Don't have an account? SignUp</a>
+    </form>
+  </div>
+</div>
+-->
+

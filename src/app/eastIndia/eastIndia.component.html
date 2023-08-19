@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<div class="container">
+
+  <img class="cover" [src] = "url">
+
+  <div class="CoverName">
+    <p><b>East India Tour Packages</b></p>
+  </div>
+
+  <div class="totalTours">
+    <h4>{{ eastIndianPackages?.length ?? 0 }} tours found</h4>
+  </div>
+  <br><br><br>
+
+  <div class="row" style="width: 1450px; position: relative; right: 150px; top: 50px;">
+    <div class="col-md-3" *ngFor="let item of eastIndianPackages" routerLink="/eastDetails/{{item.id}}" style="height: 400px;">
+      <div class="col-md-4">
+        <div class="card rounded mb-4 shadow-sm" style="width: 20rem; height: 23.5rem;">
+          <img src="{{item.image}}" alt="{{item.image}}" style="height: 250px;" class="card-img-top">
+          <!--<i class="fa-solid fa-heart fa-lg icon"></i>-->
+          <!--<i *ngIf="!isFavorite(item)" (click)="addToFavorites(item)" class="fa-solid fa-heart fa-xl icon"></i>
+          <i *ngIf="isFavorite(item)" (click)="removeFavorites(item)" style="color: red;" class="fa-solid fa-heart fa-xl icon"></i>-->
+          <div class="card-body">
+            <i class="fa-solid fa-location-dot fa-xs" style="letter-spacing: 1px; word-spacing: normal; line-height: 1.6; font-size: 8px; text-transform: uppercase;"> {{item.locations | uppercase}}</i>
+            <h5 class="card-title"  style="line-height: 1.6; text-transform: uppercase;">{{item.name | uppercase}}</h5>
+            <i class="fa-solid fa-clock" style="letter-spacing: 0.5px; word-spacing: normal; line-height: 1.6; font-size: 10px; color: #db6150; text-transform: uppercase;"> {{item.duration}}</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+
+<app-footer></app-footer>

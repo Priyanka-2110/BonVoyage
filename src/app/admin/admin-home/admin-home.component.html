@@ -1,0 +1,159 @@
+<app-navbar></app-navbar><br><br>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<div class="container">
+
+  <h1>Package List</h1>
+
+  <p class="message-p">{{packageMessage}}</p><br>
+
+   <div class="row justify-content-center" *ngFor="let item of packageList">
+      <div class="col-md-11">
+         <div class="card flex-md-row mb-4 shadow-sm h-md-250" style="border-radius: 20px;">
+            <div class="card-body d-flex flex-column align-items-start">
+               <h1 style="text-transform: uppercase;">{{item.name}}</h1><br>
+               <div style="display: flex; gap: 10px;">
+                <img src="/assets/images/location-pin.gif" style="width: 40px; height: 40px; position: relative; bottom: 7px;">
+                <h6 style="color: #db6150;">{{item.locations}}</h6>
+               </div>
+
+               <div style="display: flex; gap: 10px;">
+                <img src="/assets/images/alarm.gif" style="width: 30px; height: 30px; position: relative; bottom: 5px;">&nbsp;
+                <p style="color: #db6150;">{{item.duration}}</p>
+               </div>
+
+               <div style="display: flex; gap: 10px;">
+                <a [routerLink]="['/admin/updatePackage', item.id]" role="button" style="cursor:pointer; display: inline-block; position: relative; top: 22px;">
+                  <img src="/assets/images/edit.gif" style="width: 40px; height: 40px;">
+                </a>
+                <!--<a class="btn1 btn-5" routerLink="/admin/updatePackage/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Edit</b></a>
+                <a class="btn btn-5" routerLink="/admin/addItinerary/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Itinerary</b></a>
+                <a class="btn btn-5" routerLink="/admin/addGallery/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Gallery</b></a>-->
+                <a><img src="/assets/images/trash-bin.gif" (click)="deletePackage(item.id)" style="cursor:pointer; width: 40px; height: 40px; position: relative; top: 20px;"></a>
+               </div>
+               <br>
+               <!--<a class="btn btn-5">Hover me</a>-->
+
+            </div>
+            <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="{{ item.image }}" style="width: 310px; height: 300px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+            <div class="position-absolute w-100 h-100" style="background-image: url('/assets/images/card.gif'); background-repeat: no-repeat; background-size: 69.5% auto; border-top-right-radius: 20px; border-bottom-right-radius: 20px; opacity: 0.1; left: -1px; border-radius: 20px; pointer-events: none;"></div>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="row justify-content-center" *ngFor="let item of southPackageList">
+    <div class="col-md-11">
+       <div class="card flex-md-row mb-4 shadow-sm h-md-250" style="border-radius: 20px;">
+          <div class="card-body d-flex flex-column align-items-start">
+             <h1 style="text-transform: uppercase;">{{item.name}}</h1><br>
+             <div style="display: flex; gap: 10px;">
+              <img src="/assets/images/location-pin.gif" style="width: 40px; height: 40px; position: relative; bottom: 7px;">
+              <h6 style="color: #db6150;">{{item.locations}}</h6>
+             </div>
+
+             <div style="display: flex; gap: 10px;">
+              <img src="/assets/images/alarm.gif" style="width: 30px; height: 30px; position: relative; bottom: 5px;">&nbsp;
+              <p style="color: #db6150;">{{item.duration}}</p>
+             </div>
+
+             <div style="display: flex; gap: 10px;">
+              <a [routerLink]="['/admin/updateSouthPackage', item.id]" role="button" style="cursor:pointer; display: inline-block; position: relative; top: 22px;">
+                <img src="/assets/images/edit.gif" style="width: 40px; height: 40px;">
+              </a>
+              <!--<a class="btn1 btn-5" routerLink="/admin/updateSouthPackage/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Edit</b></a>
+              <a class="btn btn-5" routerLink="/admin/addSouthItinerary/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Itinerary</b></a>
+              <a class="btn btn-5" routerLink="/admin/addSouthGallery/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Gallery</b></a>-->
+              <a><img src="/assets/images/trash-bin.gif" (click)="deletePackage(item.id)" style="cursor:pointer; width: 40px; height: 40px; position: relative; top: 20px;"></a>
+             </div>
+             <br>
+             <!--<a class="btn btn-5">Hover me</a>-->
+
+          </div>
+          <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="{{ item.image }}" style="width: 310px; height: 300px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+          <div class="position-absolute w-100 h-100" style="background-image: url('/assets/images/card.gif'); background-repeat: no-repeat; background-size: 69.5% auto; border-top-right-radius: 20px; border-bottom-right-radius: 20px; opacity: 0.1; left: -1px; border-radius: 20px; pointer-events: none;"></div>
+       </div>
+    </div>
+ </div>
+
+
+ <div class="row justify-content-center" *ngFor="let item of eastPackageList">
+  <div class="col-md-11">
+     <div class="card flex-md-row mb-4 shadow-sm h-md-250" style="border-radius: 20px;">
+        <div class="card-body d-flex flex-column align-items-start">
+           <h1 style="text-transform: uppercase;">{{item.name}}</h1><br>
+           <div style="display: flex; gap: 10px;">
+            <img src="/assets/images/location-pin.gif" style="width: 40px; height: 40px; position: relative; bottom: 7px;">
+            <h6 style="color: #db6150;">{{item.locations}}</h6>
+           </div>
+
+           <div style="display: flex; gap: 10px;">
+            <img src="/assets/images/alarm.gif" style="width: 30px; height: 30px; position: relative; bottom: 5px;">&nbsp;
+            <p style="color: #db6150;">{{item.duration}}</p>
+           </div>
+
+           <div style="display: flex; gap: 10px;">
+            <a [routerLink]="['/admin/updateEastPackage', item.id]" role="button" style="cursor:pointer; display: inline-block; position: relative; top: 22px;">
+              <img src="/assets/images/edit.gif" style="width: 40px; height: 40px;">
+            </a>
+            <!--<a class="btn1 btn-5" routerLink="/admin/updateEastPackage/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Edit</b></a>
+            <a class="btn btn-5" routerLink="/admin/addEastItinerary/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Itinerary</b></a>
+            <a class="btn btn-5" routerLink="/admin/addEastGallery/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Gallery</b></a>-->
+            <a><img src="/assets/images/trash-bin.gif" (click)="deletePackage(item.id)" style="cursor:pointer; width: 40px; height: 40px; position: relative; top: 20px;"></a>
+           </div>
+           <br>
+           <!--<a class="btn btn-5">Hover me</a>-->
+
+        </div>
+        <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="{{ item.image }}" style="width: 310px; height: 300px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+        <div class="position-absolute w-100 h-100" style="background-image: url('/assets/images/card.gif'); background-repeat: no-repeat; background-size: 69.5% auto; border-top-right-radius: 20px; border-bottom-right-radius: 20px; opacity: 0.1; left: -1px; border-radius: 20px; pointer-events: none;"></div>
+     </div>
+  </div>
+</div>
+
+
+<div class="row justify-content-center" *ngFor="let item of westPackageList">
+  <div class="col-md-11">
+     <div class="card flex-md-row mb-4 shadow-sm h-md-250" style="border-radius: 20px;">
+        <div class="card-body d-flex flex-column align-items-start">
+           <h1 style="text-transform: uppercase;">{{item.name}}</h1><br>
+           <div style="display: flex; gap: 10px;">
+            <img src="/assets/images/location-pin.gif" style="width: 40px; height: 40px; position: relative; bottom: 7px;">
+            <h6 style="color: #db6150;">{{item.locations}}</h6>
+           </div>
+
+           <div style="display: flex; gap: 10px;">
+            <img src="/assets/images/alarm.gif" style="width: 30px; height: 30px; position: relative; bottom: 5px;">&nbsp;
+            <p style="color: #db6150;">{{item.duration}}</p>
+           </div>
+
+           <div style="display: flex; gap: 10px;">
+            <a [routerLink]="['/admin/updateWestPackage', item.id]" role="button" style="cursor:pointer; display: inline-block; position: relative; top: 22px;">
+              <img src="/assets/images/edit.gif" style="width: 40px; height: 40px;">
+            </a>
+            <!--<a class="btn1 btn-5" routerLink="/admin/updateWestPackage/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Edit</b></a>
+            <a class="btn btn-5" routerLink="/admin/addWestItinerary/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Itinerary</b></a>
+            <a class="btn btn-5" routerLink="/admin/addWestGallery/{{item.id}}" role="button" style="cursor:pointer; border: 1px solid #db6150; border-radius: 20px; text-align: center; color: black;"><b>Add Gallery</b></a>-->
+            <a><img src="/assets/images/trash-bin.gif" (click)="deletePackage(item.id)" style="cursor:pointer; width: 40px; height: 40px; position: relative; top: 20px;"></a>
+           </div>
+           <br>
+           <!--<a class="btn btn-5">Hover me</a>-->
+
+        </div>
+        <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="{{ item.image }}" style="width: 310px; height: 300px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+        <div class="position-absolute w-100 h-100" style="background-image: url('/assets/images/card.gif'); background-repeat: no-repeat; background-size: 69.5% auto; border-top-right-radius: 20px; border-bottom-right-radius: 20px; opacity: 0.1; left: -1px; border-radius: 20px; pointer-events: none;"></div>
+     </div>
+  </div>
+</div>
+
+</div>
+
+<br><br>
+<br><br>
+<app-footer></app-footer>

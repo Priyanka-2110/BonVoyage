@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<div class="row product-details" *ngIf="packageData">
+  <div class="col-sm-6">
+    <div class="PackageName">
+      <h1 style="text-transform: uppercase;">{{packageData.name}}</h1>
+      <i class="fa-solid fa-location-dot" style="padding: 10px; position: relative; right: 10px; letter-spacing: 0.5px; word-spacing: normal; color: #5E6D77; font-size: 11px; text-transform: uppercase;">  {{packageData.locations}}</i><br>
+      <!--<i class="fa-regular fa-clock"style="padding: 10px; position: relative; right: 10px; font-size: 13px; letter-spacing: 0.5px; word-spacing: normal;">  {{packageData.duration}}</i>-->
+    </div>
+    <!--<i *ngIf="!removeFav" (click)="addToFavorites()" class="fa-solid fa-heart fa-2xl icon"></i>
+    <i *ngIf="removeFav" (click)="removeFavorites(packageData.id)" style="color: red;" class="fa-solid fa-heart fa-2xl icon"></i>-->
+    <hr>
+    <!--<video class="PackageVideo" width="1000" controls>
+      <source  class="product-img" src="{{packageData.video}}" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>-->
+    <section class="gallery" *ngIf="packageData?.gallery" style="position: relative; left: 40px;">
+      <div class="container">
+        <div class="img-container text-center">
+          <img [src]="packageData.image" alt="img" id="preview">
+          <div class="img-prev">
+            <div class="img-slide active" appGallery>
+              <img [src]="packageData.image" alt="img">
+            </div>
+            <div class="img-slide" appGallery *ngFor="let image of packageData.gallery">
+              <img [src]="image.img" alt="img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+
+
+  <h1 style="padding: 80px 0 0 100px; font-family: Playfair Display,sans-serif;">Itinerary</h1>
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let item of packageData?.itinerary">
+      <mat-expansion-panel-header>
+        {{item.title}}
+      </mat-expansion-panel-header>
+      <p>
+        {{item.details}}
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div class="details">
+    <p><b>Duration:</b> {{packageData.duration}}</p>
+    <p><b>Destinations:</b> {{packageData.locations}}</p>
+  </div>
+  <br><br><br><br>
+  <div>
+    <!--<button class="btn btn-5 " (click)="booknow()">
+        <span></span>
+        ENQUIRE NOW
+    </button>-->
+  </div>
+  <br><br><br><br><br><br><br><br>
+<app-footer></app-footer>

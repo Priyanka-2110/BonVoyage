@@ -1,0 +1,126 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+<nav class="nav">
+
+
+
+  <div  *ngIf="!isAdmin" class="nav-search">
+    <h1><img class = "logo" src="/assets/images/logo.gif" alt="Logo" routerLink="/home">
+    <a routerLink="home" style="position: relative; right: 65px; bottom: 10px;" routerLink="/home">BonVoyage</a></h1>
+
+    <input type="text" #searchInput (keyup)="searchPackage($event)" (blur)="hideSearch()" placeholder="&nbsp;&nbsp;Search Destination">&nbsp;&nbsp;&nbsp;
+    <button (click)="submitSearch(searchInput.value)"><i class="fa fa-search" aria-hidden="true"></i></button>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a (mousedown)="redirectToDetails(item.id)" routerLink="/details/{{item.id}}">{{item.name}}</a>
+      </li>
+      <li *ngFor="let item of searchSouthResult">
+        <a (mousedown)="redirectToSouthDetails(item.id)" routerLink="/details/{{item.id}}">{{item.name}}</a>
+      </li>
+      <li *ngFor="let item of searchEastResult">
+        <a (mousedown)="redirectToEastDetails(item.id)" routerLink="/details/{{item.id}}">{{item.name}}</a>
+      </li>
+      <li *ngFor="let item of searchWestResult">
+        <a (mousedown)="redirectToWestDetails(item.id)" routerLink="/details/{{item.id}}">{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+    <ul *ngIf="isUser">
+      <li><a routerLink='/home'>Home</a></li>
+        <li>
+          <div class="dropdown">
+            <a class="dropbtn">Indian Pack</a>
+            <div class="dropdown-content">
+              <a routerLink='/northindia'>NORTH INDIA</a>
+              <a routerLink="/SouthIndia">SOUTH INDIA</a>
+              <a routerLink="/EastIndia">EAST INDIA</a>
+              <a routerLink="/WestIndia">WEST INDIA</a>
+            </div>
+          </div>
+        </li>
+        <!--<li><a routerLink="/favorites">Bucket List</a></li>-->
+        <!--<li><a routerLink="/favorites">Bucket List ({{favItems}})</a></li>-->
+        <li><a routerLink="/booknow">Enquire Now</a></li>
+        <!--<li><a routerLink="/admin">Admin</a></li>-->
+        <!--<li><a>Welcome {{userName | titlecase}}</a></li>-->
+        <li><a routerLink="/orders">My Orders</a></li>
+        <li><a (click)="userLogout()">Logout</a></li>
+    </ul>
+
+    <ul *ngIf="isAdmin">
+      <h1><img class = "logoA" src="/assets/images/logo.gif" alt="Logo" routerLink="/admin/home">
+      <a routerLink="home" class = "titleA" style="position: relative; right: 65px; bottom: 10px;" routerLink="/admin/home">BonVoyage</a></h1>
+      <ul class="admin">
+      <li><a routerLink="/admin/home">Packages</a></li>
+      <li><a routerLink="/admin/bookings">Enquiries</a></li>
+      <li>
+        <div class="dropdown">
+          <a class="dropbtn">Add Package</a>
+          <div class="dropdown-content">
+            <a routerLink="/admin/addPackage">NORTH INDIA</a>
+            <a routerLink="/admin/addSouthIndia">SOUTH INDIA</a>
+            <a routerLink="/admin/addEastIndia">EAST INDIA</a>
+            <a routerLink="/admin/addWestIndia">WEST INDIA</a>
+          </div>
+        </div>
+      </li>
+
+      <!--<li><a routerLink="#">{{adminName | titlecase}}</a></li>-->
+      <li><a (click)="logout()" routerLink="#">Logout</a></li>
+      <!--<li>
+        <div id="mySidenav" class="sidenav" [ngStyle]="{ width: isSidebarOpen ? '250px' : '0' }">
+          <a href="javascript:void(0)" class="closebtn" (click)="toggleSidebar()">&times;</a>
+          <a routerLink="/admin/home">Packages</a>
+          <a routerLink="/admin/bookings">Enquiries</a>
+          <a class="dropdown-btn" (click)="toggleDropdown()">Add Package<i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-container" [ngClass]="{ 'active': isDropdownOpen }">
+            <a routerLink="/admin/addPackage">North India</a>
+            <a routerLink="/admin/addSouthIndia">South India</a>
+            <a routerLink="/admin/addEastIndia">East India</a>
+            <a routerLink="/admin/addWestIndia">West India</a>
+          </div>
+
+          <a (click)="logout()" routerLink="#">Logout</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer" (click)="toggleSidebar()">&#9776;</span>
+      </li>-->
+    </ul>
+    </ul>
+
+    <ul *ngIf="!isUser && !isAdmin">
+      <li><a routerLink='/home'>Home</a></li>
+      <li>
+        <div class="dropdown">
+          <a class="dropbtn">Indian Pack</a>
+          <div class="dropdown-content">
+            <a routerLink='/northindia'>NORTH INDIA</a>
+            <a routerLink='/SouthIndia'>SOUTH INDIA</a>
+            <a routerLink='/EastIndia'>EAST INDIA</a>
+            <a routerLink='/WestIndia'>WEST INDIA</a>
+          </div>
+        </div>
+      </li>
+      <li><a routerLink="/booknow">Enquire Now</a></li>
+      <!--<li><a routerLink="#">Bucket List</a></li>-->
+      <!--<li><a routerLink="#">Bucket List ({{favItems}})</a></li>-->
+      <!--<li><a routerLink="/admin">Admin</a></li>-->
+      <li><a routerLink="/auth">Login</a></li>
+    </ul>
+</nav>
+
+<script>
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>

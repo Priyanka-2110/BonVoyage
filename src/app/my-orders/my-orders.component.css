@@ -1,0 +1,66 @@
+.my-orders{
+  margin-bottom: 100px;
+}
+.my-orders h1{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.my-orders .order-img{
+  width: 100px;
+}
+
+.my-orders .row{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom:1px solid #ddd;
+
+}
+h1{
+  text-align: center;
+  font-family: "Playfair Display",sans-serif;
+}
+.btn1 {
+  flex: 1 1 auto;
+  margin: 10px;
+  /*padding: 12px;*/
+  height: 50px;
+  width: 90px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 20px;
+  cursor: pointer;
+ }
+ .btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 12px;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 20px;
+  cursor: pointer;
+ }
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.btn-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+.cancel{
+  position: relative;
+  left: 170px;
+  top: 20px;
+}

@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="timelineContainer">
+  <ul class="timeline">
+    <li class="active-tl">Package</li>
+    <li>Itinerary</li>
+    <li>Gallery</li>
+  </ul>
+</div>
+<div class="update-product">
+  <h1>Update {{packageData?.name | titlecase}} Gallery</h1><br>
+  <p class="message-p">{{packageMessage}}</p>
+  <div style="float:left;">
+    <button class="btn1 btn1-5" id="add" (click)="addItem()" >New Gallery Field</button>
+    <form #updatePackage="ngForm" class="common-form" (ngSubmit)="updatePackageData()">
+
+      <table class="table table-bordered">
+
+        <tr *ngFor="let galleryItem of packageData?.gallery; let i=index;">
+          <td>
+            Image
+            <div class="field">
+              <input type="text" class="form-input" placeholder="Image" name="img{{i}}" [(ngModel)]="galleryItem.img">
+            </div>
+          </td>
+          <td>
+            <button class="btn1 btn1-5 remove-button" (click)="removeExistingField(i)">Remove</button>
+          </td>
+        </tr>
+
+        <tr *ngFor="let newItem of newItems; let i=index;">
+          <td>
+            Image
+            <div class="field">
+              <input type="text" class="form-input" placeholder="New Image" name="newImg{{i}}" [(ngModel)]="newItems[i].img">
+            </div>
+        </td>
+          <td>
+            <button class="btn1 btn1-5 remove-button" (click)="removeItem(i)">Remove</button>
+          </td>
+        </tr>
+
+      </table>
+      <div>
+        <button type="submit" class="btn btn-5">
+          <span></span>
+          Update Gallery
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

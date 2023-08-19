@@ -1,0 +1,159 @@
+<app-navbar></app-navbar>
+
+<img src="/assets/images/authAdmin.png" alt="auth" class="authImg" >
+
+<div class="user-auth">
+
+  <div *ngIf="!showSignIn" class="enquire-box">
+    <h2> Admin Register</h2>
+
+    <form #adminSignUp="ngForm" (ngSubmit)="signUp(adminSignUp.value)" class="common-form">
+
+      <div class="field">
+        <input type="text" name="name" #name="ngModel" ngModel required="" pattern="^(?!.*[0-9])(?!.*(?:([A-Za-z])\1{2}))[A-Za-z.'\- ]+$" minlength="3" maxlength="20">
+        <label>Name</label>
+      </div>
+
+      <div class="invalid-input">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+          <span *ngIf="name.errors?.['required']">Name is required</span>
+          <span *ngIf="name.errors?.['pattern']">Please enter a valid name</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="name.invalid && name.touched">Please Enter Your Name</span></p>-->
+
+
+      <div class="field">
+        <input type="email" name="email" email #email="ngModel" ngModel required="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        <label>Email</label>
+      </div>
+
+
+      <div class="invalid-input">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          <span *ngIf="email.errors?.['required']">Email is required</span>
+          <span *ngIf="email.errors?.['pattern']">Please enter a valid Email</span>
+        </div>
+      </div>
+
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>-->
+
+
+      <div class="field">
+        <input type="password" name="password" minlength="8" #password="ngModel" ngModel required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <label>Password</label>
+      </div>
+
+      <div class="invalid-input">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+          <span *ngIf="password.errors?.['required']">Password is required</span>
+          <span *ngIf="password.errors?.['pattern']">Please must contain atleast 1 uppercase, 1 lowercase, 1 number and 1 special character</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>-->
+
+
+      <br>
+      <div>
+        <button class="btn btn-5">
+            <span></span>
+            Register
+        </button>
+      </div>
+      <br><br>
+
+      <a class="auth-toggle-link" (click)="openSignIn()">Already have an account? SignIn</a>
+
+    </form>
+  </div>
+
+  <div *ngIf="showSignIn" class="enquire-box">
+    <h2>Admin Log In</h2>
+
+    <form #adminSignIn="ngForm" (ngSubmit)="signIn(adminSignIn.value)" class="common-form">
+
+      <p class="error-p">{{authError}}</p>
+
+      <div class="field">
+        <input type="email" name="email" email #email="ngModel" ngModel required="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        <label>Email</label>
+      </div>
+
+
+      <div class="invalid-input">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          <span *ngIf="email.errors?.['required']">Email is required</span>
+          <span *ngIf="email.errors?.['pattern']">Please enter a valid Email</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please Enter Valid Email</span></p>-->
+
+
+      <div class="field">
+        <input type="password" name="password" minlength="8" #password="ngModel" ngModel required="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <label>Password</label>
+      </div>
+
+      <div class="invalid-input">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+          <span *ngIf="password.errors?.['required']">Password is required</span>
+          <span *ngIf="password.errors?.['pattern']">Please must contain atleast 1 uppercase, 1 lowercase, 1 number and 1 special character</span>
+        </div>
+      </div>
+
+      <br>
+      <!--<p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please Enter Valid Email</span></p>-->
+
+      <br>
+      <div>
+        <button class="btn btn-5">
+            <span></span>
+            Log In
+        </button>
+      </div>
+      <br><br>
+
+      <a class="auth-toggle-link" (click)="openSignUp()">Don't have an account? SignUp</a>
+    </form>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
+
+
+
+<!--<div class="admin-auth">
+
+  <div *ngIf="!showSignIn" class="sign-up">
+    <h1>Admin Sign Up</h1>
+    <form #adminSignUp="ngForm" (ngSubmit)="signUp(adminSignUp.value)" class="common-form">
+      <input type="text" class="form-input" placeholder="Name" name="name" ngModel>
+      <input type="email" class="form-input" placeholder="Email" name="email" ngModel>
+      <input type="password" class="form-input" placeholder="Password" name="password" ngModel>
+      <button class="form-button">Sign Up</button>
+      <a class="auth-toggle-link" (click)="openSignIn()">Already have an account? SignIn</a>
+    </form>
+  </div>
+
+  <div *ngIf="showSignIn" class="sign-in">
+    <h1>Admin Sign In</h1>
+    <p class="error-p">{{authError}}</p>
+    <form #adminSignIn="ngForm" (ngSubmit)="signIn(adminSignIn.value)" class="common-form">
+      <input type="email" class="form-input" placeholder="Email" name="email" ngModel>
+      <input type="password" class="form-input" placeholder="Password" name="password" ngModel>
+      <button class="form-button">Sign In</button>
+      <a class="auth-toggle-link" (click)="openSignUp()">Don't have an account? SignUp</a>
+    </form>
+  </div>
+</div-->
+
+

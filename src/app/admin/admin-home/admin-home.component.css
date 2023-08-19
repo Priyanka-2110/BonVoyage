@@ -1,0 +1,72 @@
+table{
+  text-align: center;
+  color: #db6150;
+  border-collapse: collapse;
+  margin: auto;
+}
+img{
+  height: 100px;
+  width: 100px;
+}
+.icon{
+  color: #db6150;
+}
+tbody{
+  color: black;
+}
+table td , table th{
+  border: 1px solid #db6150;
+  padding: 10px;
+  min-width: 160pxs;
+}
+.adjust-update-link{
+  margin-left: 10px;
+  color: #db6150;
+}
+fa-icon{
+  cursor: pointer;
+}
+h1{
+  text-align: center;
+  font-family: "Playfair Display",sans-serif;
+}
+/************************************************************************************************************************************/
+.btn1 {
+  flex: 1 1 auto;
+  margin: 10px;
+  /*padding: 12px;*/
+  height: 50px;
+  width: 90px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 20px;
+  cursor: pointer;
+ }
+ .btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 12px;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 20px;
+  cursor: pointer;
+ }
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.btn-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+

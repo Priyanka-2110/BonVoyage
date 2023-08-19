@@ -1,0 +1,186 @@
+h1{
+  text-align: center;
+  font-family: "Playfair Display",sans-serif;
+  color: #db6150 !important;
+}
+
+table{
+  text-align: center;
+  color: #db6150;
+  border-collapse: collapse;
+  margin: auto;
+  position: relative;
+  left: 600px;
+}
+input {
+  border: 1px solid #db6150;
+}
+textarea{
+  position: relative;
+  top: 5px;
+  height: 70px;
+  border: 1px solid #db6150;
+}
+tbody{
+  color: black;
+}
+table td , table th{
+  border: none;
+  padding: 10px;
+  min-width: 160pxs;
+
+}
+.remove-button{
+  border-radius: 50px;
+  background-color: #db6150;
+  border: none;
+  color: white;
+  height: 20px;
+}
+#add{
+  border-radius: 50px;
+  background-color: #db6150;
+  border: none;
+  color: white;
+  height: 40px;
+  width: 150px;
+  position: relative;
+  left: 845px;
+}
+
+
+.btn-5 {
+  position: relative;
+  color: #6D6875;
+  padding: 18px 55px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 30px;
+  background: white;
+  overflow: hidden;
+  width: 254px;
+  left: 600px;
+  /*top: 30px;*/
+}
+
+.btn-5::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -15%;
+  transform: rotate(15.6deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #D8E2DC;
+  z-index: 9;
+}
+
+.btn-5::after {
+  content: "";
+  position: absolute;
+  top: -152%;
+  right: -4%;
+  transform: rotate(14.57deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #FEC89A;
+}
+
+.btn-5 span {
+  position: absolute;
+  top: -70%;
+  left: -15%;
+  transform: rotate(1.42deg);
+  border-left: 54px solid transparent;
+  border-right: 54px solid transparent;
+  border-bottom: 112px solid #FCD5CE;
+}
+
+.btn1 {
+  flex: 1 1 auto;
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  cursor: pointer;
+ }
+.btn1:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.btn1-5 {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+
+/**************************************************************************************************/
+
+.timelineContainer{
+  width: 1200px;
+  margin: auto;
+}
+
+.timeline{
+  counter-reset: test 0;
+  position: relative;
+}
+
+.timeline li{
+  list-style: none;
+  float: left;
+  width: 33.3333%;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul:nth-child(1){
+  color: #db6150;
+}
+
+.timeline li:before {
+  counter-increment: test; /* Updated from test to test 1 */
+  content: counter(test);
+  width: 50px;
+  height: 50px;
+  border: 3px solid #db6150;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto 10px auto;
+  background: #fff;
+  color: #fff;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+  background: #db6150;
+}
+.timeline li:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  top: 25px;
+  left: -50%;
+  z-index: -999;
+  transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after{
+  content: none;
+}
+.timeline li.active-tl{
+  color: #db6150;
+}
+.timeline li.active-tl + li:before {
+  background: #db6150; /* Updated background color */
+}
+.timeline li.active-tl + li:after{
+  background: #db6150;
+}

@@ -1,0 +1,160 @@
+<app-navbar></app-navbar>
+
+<br><br><br><br>
+
+<h1>ENQUIRIES</h1>
+<br><br>
+
+<!--<label for="statusFilter">Filter by Status:</label>
+<select id="statusFilter" (change)="onStatusFilterChange($event)">
+  <option value="All">All</option>
+  <option value="Active">Active</option>
+  <option value="Expired">Expired</option>
+  <option value="Cancelled">Cancelled</option>
+</select>-->
+<div class="row justify-content-end" style="position: relative; right: 110px;">
+  <div class="col-md-2">
+    <div class="field-group" required="">
+      <div class="field d-flex align-items-center">
+        <label><i class="fa-solid fa-filter fa-beat-fade"></i> Filter&nbsp;&nbsp;&nbsp;</label>
+        <select class="form-select" [(ngModel)]="status" (change)="onStatusFilterChange()" style="width: 120px;">
+          <option value="All">All</option>
+          <option value="Active">Active</option>
+          <option value="Expired">Expired</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container" *ngFor="let item of (status === 'All' ? bookings : filteredBookings)">
+<!--<div class="container" *ngFor="let item of bookings" >-->
+    <div class="main-body">
+    <h6>&nbsp;&nbsp;&nbsp;Enquired On: {{item.orderDate}}</h6><br>
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="ribbon ribbon-top-left"><span [style.background-color]="getStatusColor(item)" [style.border]="getStatusColor(item)"><b>{{ getStatus(item) }}</b></span></div>
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="/assets/images/avatar.png" alt="Admin" class="rounded-circle" width="95">
+                    <div class="mt-3">
+                      <h4>{{item.userName}}</h4>
+                      <p class="text-secondary mb-1">{{item.contact}}</p>
+                      <p class="text-muted font-size-sm">{{item.email}}</p>
+                      <br>
+                      <button class="btn btn-outline"><a style="text-decoration: none;" href="tel:{{item.contact}}">Call</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button class="btn btn-outline"><a style="text-decoration: none;" href="mailto:{{item.email}}">Email</a></button>
+                      <br><br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">DESTINATION</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{item.destination}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">DATE OF TRAVEL</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{item.date}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">TOTAL TRAVELLERS</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{item.strength}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">BOARDING POINT</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{item.address}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">PACKAGE TYPE</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{item.packageType}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">PACKAGE PRICE</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{item.packagePrice | currency: 'INR' }}
+                    </div>
+                  </div>
+                  <!--<div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">PACKAGE STATUS</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <div *ngIf="item.status === 'cancelled'" style="display: flex; gap: 10px;">
+                        <p style="color: red;"><b>Cancelled</b></p>
+                      </div>
+                      <span [style.color]="getStatusColor(item)"><b>{{ getStatus(item) }}</b></span>
+                    </div>
+                  </div>-->
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+<!--</div>-->
+</div>
+
+<br><br>
+
+<app-footer></app-footer>
+
+<!--<button (click)="callNumber(item.contact)" class="btn btn-outline-primary">Call</button>-->
+
+
+<!--<div  *ngFor="let item of bookings">
+  <br><br>{{item.userName}}<br>
+  {{item.contact}}<br>
+  {{item.email}}<br>
+  {{item.address}}<br>
+  {{item.strength}}<br>
+  {{item.date}}<br>
+  {{item.destination}}<br>
+  {{item.packageType}}<br>
+  {{item.packagePrice}}<br>
+</div>-->
+
+
+
+
+
+
+
+

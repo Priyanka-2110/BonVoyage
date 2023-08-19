@@ -1,0 +1,245 @@
+<app-navbar></app-navbar>
+
+
+
+<!--<div class="checkout">
+  <h1>Enquire Now</h1>
+  <div class="row">
+    <div class="col-sm-7">
+      <p class="message-p">{{orderMsg}}</p>
+        <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+
+        <input type="text" class="form-input" name="name" placeholder="Name" [value]="userData.name">
+        <input type="email" class="form-input" name="email" placeholder=" Email" [value]="userData.email">
+        <input type="text" class="form-input" name="address" placeholder="Address" ngModel>
+        <input type="text" class="form-input" name="contact" placeholder="Contact Number" ngModel>
+        <input type="text" class="form-input" name="contact" placeholder="Package Name" ngModel>
+        <input type="number" class="form-input" name="contact" placeholder="Duration" ngModel>
+        <button class="form-button">Order Now</button>
+
+      </form>
+    </div>
+  </div>
+</div>-->
+
+<img src="/assets/images/enquire.svg" alt="enquire" class="enquireImg" >
+
+<div class="enquire-box">
+  <h2>Enquire Now</h2>
+
+  <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+
+    <div class="field">
+      <input type="text" class="form-input" name="name" [value]="userData.name" required="" pattern="^(?!.*[0-9])(?!.*(?:([A-Za-z])\1{2}))[A-Za-z.'\- ]+$" minlength="3" maxlength="20">
+      <label>Name</label>
+    </div>
+
+    <!--<div class="invalid-input">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+        <span *ngIf="name.errors?.['required']">Name is required</span>
+        <span *ngIf="name.errors?.['pattern']">Please enter a valid name</span>
+      </div>
+    </div>-->
+
+    <div class="field">
+      <input type="email" class="form-input" name="email" [value]="userData.email" email required="" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+      <label>Email</label>
+    </div>
+
+    <!--<div class="invalid-input">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+        <span *ngIf="email.errors?.['required']">Email is required</span>
+        <span *ngIf="email.errors?.['pattern']">Please enter a valid Email</span>
+      </div>
+    </div>-->
+
+
+    <div class="field">
+      <input type="text" class="form-input" name="address" [value]="userData.address" #cityField="ngModel" ngModel required="" pattern="^[a-zA-Z\s-]+$">   <!--[class.field-error]="orderData.submitted && cityField.invalid"-->
+      <label>Boarding Point</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="cityField.invalid && (cityField.dirty || cityField.touched)" class="error-message">
+        <span *ngIf="cityField.errors?.['required']">City is required</span>
+        <span *ngIf="cityField.errors?.['pattern']">Please enter a valid city</span>
+      </div>
+    </div>
+
+    <br>
+    <!--<div [hidden]="cityField.valid || cityField.untouched" class="invalid-input"> <!-<div [hidden]="cityField.valid || !orderData.submitted" class="alert alert-danger">Enter Your City Of Residence</div>->
+      Enter Your City Of Residence
+    </div>-->
+
+
+
+    <div class="field">
+      <input type="text" class="form-input" name="contact" [value]="userData.contact" #contactField="ngModel" ngModel required="" pattern="((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))">
+      <label>Phone Number</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="contactField.invalid && (contactField.dirty || contactField.touched)" class="error-message">
+        <span *ngIf="contactField.errors?.['required']">Phone Number is required</span>
+        <span *ngIf="contactField.errors?.['pattern']">Please enter a valid number</span>
+      </div>
+    </div>
+
+    <br>
+    <!--<div [hidden]="contactField.valid || contactField.untouched" class="invalid-input">
+      Enter a contact number
+    </div>-->
+
+
+
+    <!--<div class="field">
+      <input type="text" class="form-input" [value]="userData.packageName" name="destination" #locationField="ngModel" ngModel required="" min="3" max="20" pattern="^[a-zA-Z\s-]+$">
+      <label>Travel Destination</label>
+    </div>
+
+    <div class="invalid-input">
+      <div *ngIf="locationField.invalid && (locationField.dirty || locationField.touched)" class="error-message">
+        <span *ngIf="locationField.errors?.['required']">Destination is required</span>
+        <span *ngIf="locationField.errors?.['pattern']">Please enter a valid destination</span>
+      </div>
+    </div>
+
+    <br>-->
+    <!--<div [hidden]="locationField.valid || locationField.untouched" class="invalid-input">
+      Enter Your Travel Destination
+    </div>-->
+
+
+
+    <div class="field">
+      <input type="date" class="form-input" name="date" [value]="userData.date" #dateField="ngModel" ngModel required="" [min]="tomorrow">
+      <label>Date of Travel</label>
+    </div>
+
+
+    <div class="invalid-input">
+      <div *ngIf="dateField.invalid && (dateField.dirty || dateField.touched)" class="error-message">
+        <span *ngIf="dateField.errors?.['required']">Date is required</span>
+      </div>
+    </div>
+
+    <br>
+    <!--<div [hidden]="dateField.valid || dateField.untouched" class="invalid-input">
+      Enter Date Of Travel
+    </div>-->
+
+
+
+    <div class="field">
+      <input type="number" class="form-input" name="strength" [value]="userData.strength" #totalField="ngModel"  [(ngModel)]="totalPeople" ngModel required="" min="1" max="300" pattern="^[0-9]*$">
+      <label>No of Travellers</label>
+    </div>
+
+
+    <div class="invalid-input">
+      <div *ngIf="totalField.invalid && (totalField.dirty || totalField.touched)" class="error-message">
+        <span *ngIf="totalField.errors?.['required']">No of People is required</span>
+        <span *ngIf="totalField.errors?.['pattern']">Please enter a number</span>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="field-group" required="">
+      <div class="field">
+        <label [class.disabled]="selectedDestination">&nbsp;&nbsp;Destination</label>
+        <select class="form-select" name="destination" [value]="userData.destination" [(ngModel)]="selectedDestination" (ngModelChange)="updateDropdownValidity()">
+          <option *ngFor="let item1 of dropdownData" [value]="item1.name">{{ item1.name | uppercase }}</option>
+          <option *ngFor="let item2 of dropdownSouthData" [value]="item2.name">{{ item2.name | uppercase }}</option>
+          <option *ngFor="let item3 of dropdownEastData" [value]="item3.name">{{ item3.name | uppercase }}</option>
+          <option *ngFor="let item4 of dropdownWestData" [value]="item4.name">{{ item4.name | uppercase }}</option>
+        </select>
+      </div>
+
+    <!--<div class="field-group" required="">
+      <div class="field">
+        <label [class.disabled]="selectedDestination">&nbsp;&nbsp;Destination</label>
+        <select class="form-select" name="destination" [value]="userData.destination" [(ngModel)]="selectedDestination" (ngModelChange)="updateDropdownValidity()">
+          <option value="DELHI">DELHI</option>
+          <option value="HIMACHAL">HIMACHAL</option>
+          <option value="RAJASTHAN">RAJASTHAN</option>
+          <option value="HARIDWAR">HARIDWAR</option>
+          <option value="VARANASI">VARANASI</option>
+          <option value="KERALA">KERALA</option>
+          <option value="TIRUPATI">TIRUPATI</option>
+          <option value="COORG">COORG</option>
+          <option value="TAMILNADU">TAMILNADU</option>
+          <option value="KALIMPONG">KALIMPONG</option>
+          <option value="DARJEELING">DARJEELING</option>
+          <option value="GANGTOK-PELLING">GANGTOK-PELLING</option>
+          <option value="DWARAKA">DWARAKA</option>
+          <option value="MUMBAI">MUMBAI</option>
+          <option value="PUNE">PUNE</option>
+        </select>
+      </div>-->
+
+      <div class="field">
+        <label [class.disabled]="selectedPackageType">&nbsp;&nbsp;Package Type</label>
+        <select class="form-select" name="packageType" [value]="userData.packageType" [(ngModel)]="selectedPackageType" (ngModelChange)="updateDropdownValidity()">
+          <!--<option value="" disabled>Select a package type</option>-->
+          <option value="Standard">Standard</option>
+          <option value="Deluxe">Deluxe</option>
+          <option value="Premium">Premium</option>
+          <option value="Group">Group Tour</option>
+        </select>
+      </div>
+    </div>
+    <br>
+
+    <form >
+      <button class="btn1 btn1-5" (click)="calculatePackagePrice()">Calculate Package Price</button>
+      <div *ngIf="packagePrice"style="text-align: center;">
+        <label>Package Price:</label>
+        <span style="color: #db6150;"><b>{{ packagePrice | currency: 'INR' }}</b></span>
+        <p>(Including GST @ 15%)</p>
+      </div>
+    </form>
+
+    <br>
+
+    <!--<p style="cursor: pointer;">Fare Breakup</p>
+    <p>Tour Total Cost   {{packagePrice | currency: 'INR' }}</p>
+    <p>GST @ 15%         {{packagePriceWithGST | currency: 'INR' }}</p>
+    <hr>
+    <p><b>Total Price    {{ packagePriceWithGST | currency: 'INR' }}</b></p>-->
+
+
+
+    <!--<div [hidden]="totalField.valid || totalField.untouched" class="invalid-input">
+      Enter Total People In Travel
+    </div>-->
+
+
+
+    <div>
+      <button class="btn btn-5" [disabled]="!isDropdownValid || orderData.invalid ">
+          <span></span>
+          ENQUIRE NOW
+      </button>
+    </div>
+
+  </form>
+</div>
+
+
+
+<!--<div class="enquire-box">
+  <h2>Enquire Now</h2>
+  <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
+    <div class="field">
+      <input type="text" name="" required="">
+      <label>Username</label>
+    </div>
+    <div class="field">
+      <input type="password" name="" required="">
+      <label>Password</label>
+    </div>
+  </form>
+</div>-->
+
+<app-footer></app-footer>
